@@ -3,6 +3,18 @@ $primary-color: #ff6b6b;
 $secondary-color: #2e2e3a;
 $text-light: #ffffff;
 $text-dark: #333333;
+$dark-blue: #262733;
+$vibrant-orange: #e64a3b;
+$papyrus: #eee2d4;
+$alternate-gray-blue: #3b3c47;
+$mygray: #a5a5aa;
+
+@font-face {
+  font-family: 'Square Pig';
+  src: url('../fonts/SquarePeg-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* MIXINS */
 @mixin flex-center {

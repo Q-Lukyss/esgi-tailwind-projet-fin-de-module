@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Square Pig';
+
+  src: url('../fonts/SquarePeg-Regular.ttf') format('ttf');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -863,6 +873,10 @@ video {
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-squarePig {
+  font-family: Square Pig, sans-serif;
 }
 
 .text-2xl {
