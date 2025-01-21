@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intégration Tailwind CSS</title>
+  <link rel="stylesheet" href="/assets/css/output.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- HEADER / NAVBAR -->
+  <header class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo + Nom (ou juste le nom de la coach) -->
+      <div class="text-2xl font-bold">
+        Eva Johnson
+        <span class="block text-sm font-normal">Coaching Consultant</span>
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#" class="hover:text-red-400">Home</a>
+        <a href="#" class="hover:text-red-400">About Me</a>
+        <a href="#" class="hover:text-red-400">Services</a>
+        <a href="#" class="hover:text-red-400">Contact</a>
+        <!-- Icônes ou liens vers réseaux sociaux -->
+        <a href="#" class="hover:text-red-400">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- icon placeholder --></svg>
+        </a>
+      </nav>
+
+      <!-- Bouton hamburger pour mobile -->
+      <button 
+        class="md:hidden flex flex-col space-y-1 focus:outline-none"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+        <span class="w-6 h-0.5 bg-gray-100"></span>
+        <span class="w-6 h-0.5 bg-gray-100"></span>
+        <span class="w-6 h-0.5 bg-gray-100"></span>
+      </button>
+    </div>
+
+    <!-- Menu Mobile (défaut: hidden) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+      <nav class="px-4 pb-4 flex flex-col space-y-2">
+        <a href="#" class="hover:text-red-400">Home</a>
+        <a href="#" class="hover:text-red-400">About Me</a>
+        <a href="#" class="hover:text-red-400">Services</a>
+        <a href="#" class="hover:text-red-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section 
+    class="relative bg-center bg-cover bg-no-repeat flex items-center justify-center"
+    style="background-image: url('https://via.placeholder.com/1600x900?text=Hero+Background'); min-height: 60vh;">
+    
+    <!-- Overlay sombre si besoin -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    
+    <div class="relative max-w-5xl mx-auto px-4 text-center">
+      <!-- Photo ou portrait -->
+      <div class="inline-block mb-4">
+        <img 
+          src="https://via.placeholder.com/250x350?text=Coach+Portrait" 
+          alt="Portrait de la coach"
+          class="w-48 h-auto mx-auto rounded shadow-lg" />
+      </div>
+      <!-- Texte principal -->
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">
+        I coach diverse teams <br class="hidden md:block">to collaborate better
+      </h1>
+      <p class="mb-6 max-w-xl mx-auto">
+        Short tagline ou phrase d’accroche décrivant ce que vous faites ou proposez.
+      </p>
+
+      <!-- CTA principal -->
+      <a href="#" class="inline-block bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-full font-semibold">
+        Book your session now
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION ABOUT ME / ABOUT YOU -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- About Me -->
+      <div class="flex-1">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">About me</h2>
+        <p class="mb-4">
+          Quelques lignes de présentation personnelle : expérience, expertise, 
+          ce qui vous passionne, et en quoi votre coaching est unique.
+        </p>
+        <p class="mb-4">
+          Par exemple : “J’aide les équipes à surmonter leurs blocages et à atteindre
+          leur plein potentiel.”
+        </p>
+        <a href="#" class="text-red-400 underline">More about me →</a>
+      </div>
+
+      <!-- About You -->
+      <div class="flex-1">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">About you</h2>
+        <p class="mb-4">
+          Texte décrivant le profil des clients : “Vous êtes manager en quête d’un
+          meilleur leadership ? Vous souhaitez améliorer la cohésion de vos équipes ?”
+        </p>
+        <p class="mb-4">
+          Expliquez comment votre coaching répond aux besoins spécifiques de vos clients.
+        </p>
+        <a href="#" class="text-red-400 underline">More about your needs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION WORKING TOGETHER (avec la forme arrondie rouge) -->
+  <section class="relative overflow-hidden">
+    <!-- Pour simuler l’arche/arc rouge, on peut placer un bloc rond en position absolue -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120vw] h-[120vw] bg-red-600 rounded-full 
+                -z-10 opacity-20 md:opacity-100 md:top-[-50%]">
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 py-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Working Together</h2>
+      <p class="mb-10 max-w-2xl mx-auto">
+        Un petit paragraphe décrivant la philosophie de travail, la vision du coaching,
+        l’importance de la collaboration et les bénéfices.
+      </p>
+
+      <!-- Cards / étapes du coaching -->
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <!-- Étape 1 -->
+        <div class="flex items-start space-x-4">
+          <div class="text-red-400">
+            <!-- Icon placeholder -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Clarify your goals</h3>
+            <p>Définissez vos objectifs et priorités, et identifiez ce qui compte vraiment.</p>
+          </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="flex items-start space-x-4">
+          <div class="text-red-400">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Assess the reality of your situation</h3>
+            <p>Évaluez ce qui bloque actuellement, et comment vous pouvez avancer.</p>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="flex items-start space-x-4">
+          <div class="text-red-400">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Explore the possibilities</h3>
+            <p>Identifiez les différentes options, et ouvrez-vous de nouvelles perspectives.</p>
+          </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="flex items-start space-x-4">
+          <div class="text-red-400">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Decide on the best solution</h3>
+            <p>Choisissez la stratégie la plus adaptée et passez à l’action de manière concrète.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boutons en bas de la section -->
+      <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a 
+          href="#" 
+          class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full">
+          More about my method
+        </a>
+        <a 
+          href="#" 
+          class="bg-transparent border border-red-500 hover:bg-red-500 text-red-500 hover:text-white font-semibold py-3 px-6 rounded-full">
+          Book your session now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION KNOWLEDGE & PRACTICE -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Colonne gauche -->
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Knowledge</h2>
+        <div class="mb-4">
+          <img 
+            src="https://via.placeholder.com/400x400?text=Knowledge+Picture" 
+            alt="Knowledge placeholder" 
+            class="w-full h-auto rounded shadow" />
+        </div>
+        <p class="mb-4">
+          Un petit paragraphe expliquant les bases théoriques, les méthodes que vous utilisez,
+          références, formations suivies, etc.
+        </p>
+        <p>
+          Mettez en avant vos diplômes, certifications, recherches, etc.
+        </p>
+      </div>
+
+      <!-- Colonne droite -->
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Practice</h2>
+        <p class="mb-4">
+          Expliquez comment vous mettez en œuvre ces connaissances à travers des exercices,
+          mises en situation, ateliers, etc.
+        </p>
+        <p class="mb-4">
+          Par exemple : “J’organise des workshops interactifs afin d’engager chaque membre
+          de l’équipe et favoriser la collaboration.”
+        </p>
+
+        <!-- Bloc "Life Experience" -->
+        <div class="mt-8 p-6 bg-gray-800 rounded shadow">
+          <h3 class="text-2xl font-semibold mb-2">Life Experience</h3>
+          <p>
+            Montrez que l’expérience personnelle peut être un atout : “J’ai moi-même 
+            traversé des périodes de doutes en tant que manager, ce qui me permet 
+            de comprendre plus facilement vos difficultés.”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / BOUTON FINAL -->
+  <section class="py-8 bg-gray-800 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to dive in?</h2>
+    <p class="max-w-xl mx-auto mb-6">Petite phrase finale pour encourager à passer à l’action.</p>
+    <a 
+      href="#"
+      class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full">
+      Book a session
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 py-4 text-center text-sm">
+    <p class="opacity-70">&copy; 2023 Eva Johnson. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
