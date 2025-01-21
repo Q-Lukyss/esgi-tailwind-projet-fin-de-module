@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Working Together - Eva Johnson</title>
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  
+  <!-- HEADER / NAVBAR -->
+  <header class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo + Sous-titre -->
+      <div>
+        <div class="text-2xl font-bold">Eva Johnson</div>
+        <div class="text-sm text-gray-300">
+          COMMUNICATION EXPERT • COACH • EDUCATOR
+        </div>
+      </div>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="../index.html" class="hover:text-red-400">Home</a>
+        <a href="./about.html" class="hover:text-red-400">About Me</a>
+        <a href="./working-together.html" class="text-red-400 font-semibold">Working Together</a>
+        <a href="./contact.html" class="hover:text-red-400">Contact</a>
+        <!-- Icônes de contact / RS -->
+        <div class="flex space-x-4 pl-4">
+          <!-- Email icon -->
+          <a href="#" class="hover:text-red-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- placeholder icon -->
+              <path d="M..." />
+            </svg>
+          </a>
+          <!-- LinkedIn icon -->
+          <a href="#" class="hover:text-red-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- placeholder icon -->
+              <path d="M..." />
+            </svg>
+          </a>
+          <!-- Phone icon -->
+          <a href="#" class="hover:text-red-400">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <!-- placeholder icon -->
+              <path d="M..." />
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Bouton hamburger (mobile) -->
+      <button 
+        class="md:hidden flex flex-col space-y-1 focus:outline-none"
+        onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
+        <span class="w-6 h-0.5 bg-gray-100"></span>
+        <span class="w-6 h-0.5 bg-gray-100"></span>
+        <span class="w-6 h-0.5 bg-gray-100"></span>
+      </button>
+    </div>
+
+    <!-- Menu Mobile (défaut: hidden) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pb-4">
+      <nav class="flex flex-col space-y-2">
+        <a href="index.html" class="hover:text-red-400">Home</a>
+        <a href="about.html" class="hover:text-red-400">About Me</a>
+        <a href="working.html" class="text-red-400 font-semibold">Working Together</a>
+        <a href="#" class="hover:text-red-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO : Image + label "Working together" -->
+  <section 
+    class="relative bg-center bg-cover bg-no-repeat"
+    style="background-image: url('https://via.placeholder.com/1600x500?text=Working+Together'); min-height: 40vh;">
+    <!-- Voile sombre si besoin -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+    <div class="relative flex items-center justify-center h-full max-w-7xl mx-auto px-4 py-8">
+      <!-- Label "Working together" -->
+      <div class="bg-red-500 px-6 py-2 rounded-full inline-block">
+        <h1 class="text-white text-2xl md:text-3xl font-bold">
+          Working together
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL : Étapes, quotes, etc. -->
+  <main class="bg-gray-900 text-gray-100 py-12">
+    <div class="max-w-5xl mx-auto px-4">
+
+      <!-- Citation / phrase d’introduction -->
+      <div class="border-l-4 border-gray-500 pl-4 italic text-gray-300 mb-10">
+        Our working relationship is a partnership <br/>
+        based on mutual commitment and trust.
+      </div>
+
+      <!-- Liste d’étapes (icône + titre + texte) -->
+      <div class="space-y-12">
+
+        <!-- Étape 1 -->
+        <div class="flex flex-col md:flex-row md:items-start gap-4">
+          <!-- Icône -->
+          <div class="text-red-500 shrink-0">
+            <!-- Target / goal icon -->
+            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M..." />
+            </svg>
+          </div>
+          <!-- Titre + texte -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Clarify your goals</h2>
+            <p class="text-gray-300">
+              What do you want to achieve? Sometimes the goal is clear and loud, 
+              sometimes it is dissimulated.
+            </p>
+          </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="flex flex-col md:flex-row md:items-start gap-4">
+          <div class="text-red-500 shrink-0">
+            <!-- Search / possibilities icon -->
+            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M..." />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Explore the possibilities</h2>
+            <p class="text-gray-300">
+              What kind of solutions are readily available to you? 
+              How can you reframe the problems to reveal new possibilities?
+            </p>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="flex flex-col md:flex-row md:items-start gap-4">
+          <div class="text-red-500 shrink-0">
+            <!-- Globe icon -->
+            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M..." />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Assess the reality of your situation</h2>
+            <p class="text-gray-300">
+              How far is your goal from where you are now? What are the obstacles on the path?
+              What are the constraints? What are your strengths and weaknesses?
+            </p>
+          </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="flex flex-col md:flex-row md:items-start gap-4">
+          <div class="text-red-500 shrink-0">
+            <!-- Check / decide icon -->
+            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M..." />
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold mb-2">
+              Assess the possibilities and decide on the best solution for you
+            </h2>
+            <p class="text-gray-300">
+              What do you need to do to make it happen? How will you motivate yourself 
+              to stay on track?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citation supplémentaire -->
+      <div class="mt-12 border-l-4 border-gray-500 pl-4 italic text-gray-300">
+        Although the coaching plan looks like a linear progression, 
+        in reality it is an iterative process that allows 
+        for ongoing evaluation and readjustment.
+      </div>
+
+      <!-- Dernier paragraphe ou phrase de conclusion -->
+      <div class="mt-12 border-l-4 border-red-500 pl-4 text-gray-100">
+        Together we work to clarify your goals, identify the obstacles on your path 
+        and open up the field of possibilities to move forward. 
+        I help you draw a realistic roadmap and set yourself in action.
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Lien retour page principale -->
+  <section class="bg-gray-900 py-8 text-center">
+    <a 
+      href="/index.html" 
+      class="text-gray-100 hover:text-red-400 font-semibold text-lg inline-flex items-center">
+      <span class="mr-2 text-2xl">&laquo;&laquo;</span>
+      Back to main page
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-red-500 py-3 text-center">
+    <p class="text-white text-sm">eva-johnson.dev</p>
+  </footer>
+
+</body>
+</html>
