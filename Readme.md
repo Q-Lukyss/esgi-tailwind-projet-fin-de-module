@@ -1,4 +1,4 @@
-# Projet de fin de Module 
+# Projet de fin de Module [ESGI Reims](https://www.esgi.fr/campus-reims.html) Intégration [Tailwind CSS](https://tailwindcss.com/) et [SCSS/SASS](https://sass-lang.com/)
 
 Les pages Home, About, Working Together fonctionne avec [Tailwind CSS](https://tailwindcss.com/)    
 La page Contact fonctionne avec [SCSS/SASS](https://sass-lang.com/)
@@ -9,6 +9,7 @@ A la racine du projet
 ```
 npm install
 ```
+Lancer ensuite un serveur virtuel [and voilà!](https://www.urbandictionary.com/define.php?term=voila)
 
 ### Lancer Tailwind CSS
 
