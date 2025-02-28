@@ -1,150 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Working together</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working together</title>
+    <base href="/" /> 
 
-  <base href="/" /> 
-  
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/assets/js/main.js" defer></script>
-  <link rel="stylesheet" href="assets/css/tailwind.css">
-</head>
-<body class="bg-background font-raleway text-full-black">
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
 
-  <!-- NAVBAR -->
-  <div id="navbar-container"></div>
+  <body class="bg-dark-blue font-raleway text-alternate-gray-blue">
+    <!-- NAVBAR (injecté dynamiquement) -->
+    <div id="navbar-container"></div>
 
-  <!-- Image de couverture -->
-  <img src="assets/images/hands.png" alt="Multiples hands united" class="w-full object-cover" />
+    <!-- Image de couverture -->
+    <img
+      src="assets/images/hands.png"
+      alt="Multiples hands united"
+      class="w-full object-cover"
+    />
 
-  <!-- Titre mobile -->
-  <div class="bg-primary px-10 py-8 lg:hidden">
-    <p class="font-square-peg text-7xl">Work together</p>
-  </div>
+    <!-- Titre mobile (affiché uniquement en mobile) -->
+    <div class="bg-vibrant-orange px-4 py-8 lg:hidden text-center">
+      <p class="font-square-peg text-5xl text-papyrus">Working together</p>
+    </div>
 
-  <!-- Section principale -->
-  <div class="relative flex flex-col gap-16 px-16 py-8 text-lg">
-    <div class="flex flex-col gap-8">
-      <!-- Titre "Work together !" en desktop -->
-      <div class="absolute left-20 top-[-2rem] hidden rounded-full border-4 border-secondary bg-primary px-10 lg:block">
-        <p class="scale-[2] px-16 pb-3 font-square-peg text-5xl text-secondary">
-          Work together !
-        </p>
-      </div>
-      <br />
+    <!-- Section principale -->
+    <div class="relative flex flex-col gap-10 px-4 py-8 text-base md:gap-12 md:px-8 md:text-lg lg:px-16">
+      <div class="flex flex-col items-center gap-8">
 
-      <!-- Conteneur central avec texte et CheckView -->
-      <div class="mx-16 grid max-w-screen-md gap-16">
-        <!-- Bloc avant les CheckView (affiché uniquement sur desktop) -->
-        <div class="hidden border-l-2 border-new-gray py-4 pl-10 lg:block">
-          <p class="text-xl text-new-gray">
-            Our working relationship is a partnership based on mutual commitment and trust
+        <!-- Titre "Working together !" version desktop (cercle), visible seulement sur grand écran -->
+        <div
+          class="hidden lg:block lg:absolute lg:left-20 lg:top-[-2rem]
+                 rounded-full border-4 border-mygray bg-vibrant-orange px-10"
+        >
+          <p class="scale-[2] px-36 py-1 pb-3 font-square-peg text-5xl text-papyrus">
+            Working together
           </p>
         </div>
 
-        <!-- Conteneur pour les CheckView (généré dynamiquement) -->
-        <div id="checks-container" class="flex flex-col gap-8"></div>
+        <!-- Conteneur central : centré sur mobile, légèrement décalé sur bureau -->
+        <!-- Pas de width/height forcés; on utilise la max-w pour limiter la largeur -->
+        <div class="mx-auto lg:ml-16 grid max-w-screen-md gap-16">
+          
+          <!-- Bloc avant les CheckView : visible sur mobile/desktop, mais la barre grise n’apparaît qu’en grand écran -->
+          <div class="mt-4 py-4 px-4 lg:mt-16 lg:px-0 lg:py-4 lg:pl-10 lg:border-l-2 border-mygray">
+            <p class="text-xl text-mygray text-center lg:text-left">
+              Our working relationship is a partnership based on mutual
+              commitment and trust
+            </p>
+          </div>
 
-        <!-- Bloc intermédiaire -->
-        <div class="border-l-2 border-new-gray py-4 pl-10">
-          <p class="text-xl text-new-gray">
-            Although the coaching plan looks like a linear progression, in reality it is an iterative process that allows for ongoing evaluation and readjustment.
-          </p>
-        </div>
+          <!-- Conteneur pour les CheckView (injecté via main.js) -->
+          <div id="checks-container" class="flex flex-col gap-16"></div>
 
-        <!-- Bloc final -->
-        <div class="border-l-2 border-primary py-4 pl-10">
-          <p class="text-xl text-new-gray">
-            Together we work to clarify your goals, identify the obstacles on your path and open up the field of possibilities to move forward. I help you draw a realistic roadmap and set yourself in action.
-          </p>
+          <!-- Bloc intermédiaire -->
+          <div class="border-l-2 border-mygray py-4 pl-10">
+            <p class="text-xl text-mygray">
+              Although the coaching plan looks like a linear progression, in
+              reality it is an iterative process that allows for ongoing
+              evaluation and readjustment.
+            </p>
+          </div>
+
+          <!-- Bloc final -->
+          <div class="border-l-2 border-vibrant-orange py-4 pl-10">
+            <p class="text-xl text-mygray">
+              Together we work to clarify your goals, identify the obstacles on
+              your path and open up the field of possibilities to move forward.
+              I help you draw a realistic roadmap and set yourself in action.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Lien "Back to main page" -->
-  <a href="/" class="my-16 ml-28 flex items-center gap-10">
-    <img src="assets/icons/chevrons.svg" alt="Back to main page" />
-    <p class="text-4xl font-bold text-secondary">Back to main page</p>
-  </a>
+    <!-- Bouton "Back to main page" (injecté dynamiquement) -->
+    <div id="back-main-page-container"></div>
 
-  <!-- Footer -->
-  <div id="footer-container"></div>
-
-  <!-- Script JavaScript pour générer les CheckView -->
-  <script>
-    // // Définition des données "checks"
-    // const checks = [
-    //   {
-    //     name: 'Clarify your goals',
-    //     content:
-    //       'What do you want to achieve? Sometimes the goal is clear and loud. Sometimes it is dissimulated.',
-    //     src: 'assets/icons/target.svg'
-    //   },
-    //   {
-    //     name: 'Explore the possibilities',
-    //     content:
-    //       'What kind of possibilities are available to you? How can you reframe the problems to reveal new possibilities?',
-    //     src: 'assets/icons/world.svg'
-    //   },
-    //   {
-    //     name: 'Access the reality of your situation',
-    //     content:
-    //       'How far is your goal from where you are now? What obstacles stand in your way? What are your constraints and strengths?',
-    //     src: 'assets/icons/planet.svg'
-    //   },
-    //   {
-    //     name: 'Assess the possibilities and decide on the best solution for you',
-    //     content:
-    //       'What do you need to do to make it happen? How will you motivate yourself to stay on track?',
-    //     src: 'assets/icons/notes.svg'
-    //   }
-    // ];
-
-    // // Fonction de rendu d'un CheckView
-    // function renderCheckView(check, compact = true) {
-    //   const container = document.createElement("div");
-    //   container.className = "flex flex-col gap-8" + (compact ? " max-w-lg" : "");
-
-    //   // En-tête : image et titre
-    //   const header = document.createElement("div");
-    //   header.className = "flex flex-col items-center gap-8 lg:flex-row";
-
-    //   const img = document.createElement("img");
-    //   img.src = check.src;
-    //   img.alt = check.name;
-    //   // Taille équivalente à "size-12" en Tailwind : 3rem
-    //   img.className = "w-12 h-12";
-    //   header.appendChild(img);
-
-    //   const title = document.createElement("p");
-    //   title.className = "text-center text-3xl font-semibold text-secondary lg:text-left";
-    //   title.textContent = check.name;
-    //   header.appendChild(title);
-
-    //   container.appendChild(header);
-
-    //   // Contenu textuel
-    //   const content = document.createElement("p");
-    //   content.className = "text-center text-new-gray lg:text-left";
-    //   content.textContent = check.content;
-    //   container.appendChild(content);
-
-    //   return container;
-    // }
-
-    // // Récupérer le conteneur où insérer les CheckView
-    // const checksContainer = document.getElementById("checks-container");
-
-    // // Pour chaque élément de checks, créer et ajouter son CheckView
-    // checks.forEach(check => {
-    //   const checkView = renderCheckView(check, true);
-    //   checksContainer.appendChild(checkView);
-    // });
-  </script>
-</body>
+    <!-- Footer (injecté dynamiquement) -->
+    <div id="footer-container"></div>
+  </body>
 </html>
