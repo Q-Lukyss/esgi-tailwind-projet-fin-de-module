@@ -27,9 +27,6 @@ fetch("/components/back-main-page.partial")
 /* --------------------------------------------
    2) Navbar links + médias
 -------------------------------------------- */
-/**
- * Initialise la liste de liens pour la navbar
- */
 function initNavbarLinks() {
   const links = [
     { name: "Home", href: "/" },
@@ -39,7 +36,7 @@ function initNavbarLinks() {
   ];
 
   const navLinksContainer = document.getElementById("nav-links");
-  if (!navLinksContainer) return; // Sécurité si pas de nav-links
+  if (!navLinksContainer) return; 
 
   const currentPath = window.location.pathname;
   links.forEach(link => {
@@ -54,9 +51,6 @@ function initNavbarLinks() {
   });
 }
 
-/**
- * Initialise les liens/ICÔNES de réseaux (mail, LinkedIn, phone)
- */
 function initNavbarMedias() {
   const medias = [
     { name: "Email", href: "mailto:eva.johnson@dev.com", src: "assets/icons/mail.svg" },
@@ -83,9 +77,6 @@ function initNavbarMedias() {
   });
 }
 
-/* --------------------------------------------
-   3) LOGIQUE DE CHECKS (Home / Working-together)
--------------------------------------------- */
 
 /**
  * Données communes pour les checks
@@ -155,9 +146,6 @@ function renderArrow(src, alt, extraClasses = "") {
   return img;
 }
 
-/* --------------------------------------------
-   4) Home page => #check-chain-section
--------------------------------------------- */
 const chainContainer = document.getElementById("check-chain-section");
 if (chainContainer) {
   // => On suppose qu'on est sur la Home (index.html)
