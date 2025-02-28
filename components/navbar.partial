@@ -1,7 +1,7 @@
 <nav class="flex flex-col px-8 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="font-square-peg text-7xl text-white">Eva Johnson</a>
+      <a href="/" class="font-square-peg text-7xl text-white hover:text-vibrant-orange">Eva Johnson</a>
 
       <!-- Bouton hamburger (visible en mobile) -->
       <img src="assets/icons/hamburger.svg" alt="Menu" class="lg:hidden">
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Ligne descriptive avec les Dot -->
-    <p class="flex items-center gap-1 text-xs font-semibold uppercase text-white">
+    <p class="flex items-center gap-4 text-xs font-semibold uppercase text-white">
       Communication expert
       <span class="inline-block">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">

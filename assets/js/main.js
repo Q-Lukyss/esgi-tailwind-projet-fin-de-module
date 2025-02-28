@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    1) NAVBAR & FOOTER
    ------------------------------------------------------------------ */
-   fetch("/components/navbar.html")
+   fetch("/components/navbar.partial")
    .then(response => response.text())
    .then(html => {
      document.getElementById("navbar-container").innerHTML = html;
@@ -10,7 +10,7 @@
    })
    .catch(err => console.error("Erreur fetch navbar :", err));
  
- fetch("/components/footer.html")
+ fetch("/components/footer.partial")
    .then(response => response.text())
    .then(html => {
      document.getElementById("footer-container").innerHTML = html;
@@ -60,7 +60,7 @@
    medias.forEach(media => {
      const a = document.createElement("a");
      a.href = media.href;
-     a.className = "rounded-full bg-primary p-4 transition-colors hover:bg-primary/90";
+     a.className = "rounded-full bg-primary p-4 transition-colors hover:bg-vibrant-orange/70";
  
      const img = document.createElement("img");
      img.className = "w-6 h-6";
