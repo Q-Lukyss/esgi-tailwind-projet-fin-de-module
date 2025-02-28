@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./*.html",
     "./pages/*.html",
-    "./components/*.html",   // <- Ajouter si nécessaire
+    "./components/*.partial",   // <- Ajouter si nécessaire
     "./assets/js/*.js"
   ],
   theme: {
