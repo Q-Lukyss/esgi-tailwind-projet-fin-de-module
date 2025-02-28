@@ -9,24 +9,24 @@
   <base href="/" />
 
   <!-- Import Google Fonts pour Raleway et Square Pig -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"/>
   
   <!-- Lien vers votre CSS compilé depuis style.scss -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div class="base">
-    <!-- Navigation -->
+
     <nav>
       <div>
-        <a class="square-peg" href="/">Eva Johnson</a>
+        <a class="square-peg title" href="/">Eva Johnson</a>
         <img class="show-phone" src="assets/icons/hamburger.svg" alt="Menu" />
         <div class="hide-phone">
           <div class="links">
             <a href="/">Home</a>
-            <a href="/about">About me</a>
-            <a href="/working">Working together</a>
-            <a href="/contact" class="active">Contact</a>
+            <a href="/pages/about.html">About me</a>
+            <a href="/pages/working-together.html">Working together</a>
+            <a href="/pages/contact.html" class="active">Contact</a>
           </div>
         </div>
         <div class="hide-phone">
@@ -60,7 +60,6 @@
       </p>
     </nav>
 
-    <!-- Contenu principal -->
     <div class="content">
       <div>
         <div class="page">
@@ -75,6 +74,7 @@
               </div>
             </form>
           </div>
+
           <div class="image">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" height="600">
               <defs>
@@ -88,26 +88,27 @@
               </defs>
               <rect id="start-rect" x="0" y="191" width="15" height="15" fill="red" />
               <path d="M 0 200 Q 80 241 300 250 Q 581 240 590 301" fill="none" stroke="red" stroke-width="3" />
-              <image mask="url(#fadeMask)" href="assets/images/eva_johnson_contact.png" x="150" />
+              <image mask="url(#fadeMask)" href="assets/images/eva_johnson_contact-removebg.png" x="150" />
               <path d="M 200 600 Q -100 500 350 430 Q 590 380 590 300" fill="none" stroke="red" stroke-width="3" />
             </svg>
+            
             <div id="plus-medias">
-              <a href="mailto:eva.johnson@outlook.com">
+              <a href="mailto:eva.johnson@dev.com">
                 <img src="assets/icons/mail.svg" alt="Email" />
               </a>
-              <a href="https://www.linkedin.com/in/eva-johnson">
+              <a href="https://www.linkedin.com/in/evajohnson">
                 <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
               </a>
-              <a href="tel:+1234567890">
+              <a href="tel:+33666666666">
                 <img src="assets/icons/phone.svg" alt="Phone" />
               </a>
             </div>
           </div>
         </div>
-        <p class="back">
+        <a class="back" href="/index.html">
           <img src="assets/icons/chevrons.svg" alt="Back to main page" />
           Back to main page
-        </p>
+        </a>
       </div>
     </div>
 

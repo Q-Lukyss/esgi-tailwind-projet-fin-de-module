@@ -1,4 +1,3 @@
-/* VARIABLES */
 $primary-color: #ff6b6b;
 $secondary-color: #2e2e3a;
 $text-light: #ffffff;
@@ -16,7 +15,7 @@ $mygray: #a5a5aa;
   font-style: normal;
 }
 
-:global(*) {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,6 +43,10 @@ $mygray: #a5a5aa;
   color: $papyrus;
   font-weight: bold;
   margin-top: 2rem;
+
+  &:hover {
+    color: $vibrant-orange;
+  }
 }
 
 .content {
@@ -152,7 +155,8 @@ svg {
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: #1a1a1a;
+        background-color: white;
+        color: $vibrant-orange;
       }
 
       @media (max-width: 1024px) {
@@ -175,6 +179,13 @@ nav {
     display: flex;
     gap: 0.5rem;
   }
+
+  .title{
+    &:hover {
+      color: $vibrant-orange;
+    }
+  }
+
   div {
     display: flex;
     align-items: center;
@@ -191,6 +202,9 @@ nav {
         &.active {
           background-color: $vibrant-orange;
         }
+        &:hover {
+          background-color: $vibrant-orange;
+        }
       }
     }
 
@@ -204,6 +218,9 @@ nav {
         padding: 1rem;
         background-color: $vibrant-orange;
         border-radius: 50%;
+        &:hover {
+          opacity: 80;
+        }
         img {
           width: 1.5rem;
           height: 1.5rem;

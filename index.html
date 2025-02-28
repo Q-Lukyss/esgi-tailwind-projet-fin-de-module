@@ -7,7 +7,6 @@
   <base href="/">
 
   <!-- Import de la police Raleway (regular + italic) -->
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,30 +24,30 @@
     <section class="relative flex items-center justify-center gap-4 bg-bg-meeting bg-cover bg-center py-0">
       <!-- Overlay coloré -->
       <div class="absolute inset-0 bg-neutral-800 bg-opacity-60"></div>
-    
+
       <!-- Contenu au premier plan -->
-      <div class="relative z-10 flex items-center justify-center gap-4">
+      <div class="relative z-10 flex flex-col items-center justify-center gap-4 lg:flex-row">
         <!-- Image d'Eva Johnson -->
         <img
           src="assets/images/eva_johnson_home.png"
-          class="max-w-md"
+          class="max-w-xs sm:max-w-sm md:max-w-md"
           alt="Eva Johnson"
         />
-    
-        <!-- Bloc de texte et bouton -->
-        <div class="hidden max-w-lg flex-col justify-center gap-8 lg:grid">
-          <p class="text-center text-4xl font-bold">
+
+        <!-- Bloc de texte et bouton (affiché à partir du lg) -->
+        <div class="hidden max-w-lg flex-col justify-center gap-8 text-center lg:grid lg:text-left">
+          <p class="text-2xl sm:text-3xl md:text-4xl font-bold">
             I coach diverse teams to collaborate better.
           </p>
-          <div class="mx-auto">
+          <div>
             <button
               id="btnConcerned"
-              class="rounded-full bg-vibrant-orange text-white border-4 border-white px-16 py-4 text-xl uppercase transition-colors hover:bg-white hover:text-vibrant-orange hover:border-vibrant-orange"
+              class="rounded-full bg-vibrant-orange text-white border-4 border-white px-8 py-3 text-base sm:text-lg md:text-xl uppercase transition-colors hover:bg-white hover:text-vibrant-orange hover:border-vibrant-orange"
             >
               Are you concerned?
             </button>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-48" viewBox="0 0 120 4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-36 sm:w-48" viewBox="0 0 120 4">
             <path
               d="M 0 0 L 50 2 L 90 1 L 120 2"
               class="fill-none stroke-primary"
@@ -58,12 +57,12 @@
         </div>
       </div>
     </section>
-    
 
     <!-- Section About me & About you -->
-    <section class="flex flex-col justify-end text-xl text-full-white/90 lg:flex-row">
+    <!-- On centre sur mobile et on augmente le padding uniquement sur grands écrans -->
+    <section class="flex flex-col text-xl text-full-white/90 lg:flex-row">
       <!-- About me -->
-      <div class="relative flex flex-col justify-between gap-12 border-t-2 border-full-white px-28 py-16 leading-10">
+      <div class="relative flex flex-col justify-between gap-12 border-t-2 border-full-white px-4 py-12 leading-10 sm:px-8 md:px-12 lg:px-28 lg:py-16">
         <div class="absolute right-0 top-0 z-20 hidden -translate-y-1/2 translate-x-1/2 lg:block">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" aria-label="SVG Point" class="fill-primary">
@@ -71,13 +70,13 @@
             </svg>
           </span>
         </div>
-        <div class="flex flex-col gap-16">
-          <h2 class="text-7xl text-new-gray">About me</h2>
+        <div class="flex flex-col gap-8 sm:gap-16 text-center lg:text-left">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-new-gray">About me</h2>
           <p>
             My work is informed by extensive knowledge of communication, psychology and organization
             theories and research. I work through an interdisciplinary lens.
           </p>
-          <p class="text-right lg:text-left">
+          <p>
             Certified with distinction in Coaching Individuals, Teams, and Organizations by a reputable business school.
           </p>
           <p>
@@ -85,7 +84,9 @@
             and develop their potential in public speaking, interpersonal communication and team collaboration.
           </p>
         </div>
-        <a class="font-semibold uppercase hover:text-vibrant-orange relative" href="/pages/about.html">More about me +
+        <a class="font-semibold uppercase hover:text-vibrant-orange relative block mt-4 lg:mt-0 text-center lg:text-left"
+           href="/pages/about.html">
+          More about me +
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-48 absolute" viewBox="0 0 120 4">
             <path
               d="M 0 0 L 50 2 L 90 1 L 120 2"
@@ -94,18 +95,17 @@
             />
           </svg>
         </a>
-        
       </div>
 
       <!-- About you -->
-      <div class="z-10 flex flex-col justify-between gap-16 border-l-2 border-t-2 border-full-white bg-alternace-blue px-28 py-16 leading-10 lg:mt-[-5rem]">
-        <div class="flex flex-col gap-16">
-          <h2 class="text-7xl text-new-gray">About you</h2>
+      <div class="z-10 flex flex-col justify-between gap-8 sm:gap-16 border-l-0 lg:border-l-2 border-t-2 border-full-white bg-alternace-blue px-4 py-12 leading-10 sm:px-8 md:px-12 lg:mt-[-5rem] lg:px-28 lg:py-16 text-center lg:text-left">
+        <div class="flex flex-col gap-8 sm:gap-16">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-new-gray">About you</h2>
           <p>
             You are a busy professional who wants to share ideas more freely, communicate them with an
             impact, feel seen, and be rewarded.
           </p>
-          <p class="text-right lg:text-left">
+          <p>
             You are an HR manager searching for personalized human development approaches that are
             realistic, go beyond reified skills checkboxes, and produce sustainable results at the
             individual, team, and organizational levels.
@@ -115,7 +115,9 @@
             intelligence, and cares for its people.
           </p>
         </div>
-        <a class="font-semibold uppercase hover:text-vibrant-orange relative" href="#">More about your needs +
+        <a class="font-semibold uppercase hover:text-vibrant-orange relative block"
+           href="#">
+          More about your needs +
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-48 absolute" viewBox="0 0 120 4">
             <path
               d="M 0 0 L 50 2 L 90 1 L 120 2"
@@ -124,7 +126,6 @@
             />
           </svg>
         </a>
-        
       </div>
     </section>
 
@@ -135,7 +136,7 @@
         <clipPath id="curveClip">
           <path d="M 0 400 L 0 100 Q 500 -100 1000 100 L 1000 350 L 1000 400 Q 900 100 500 90 Q 100 100 0 400 Z"/>
         </clipPath>
-        <g font-family="Arial" font-size="75" text-anchor="middle">
+        <g font-family="Arial" font-size="55" sm:font-size="65" md:font-size="75" text-anchor="middle">
           <text x="280" y="150" class="fill-secondary stroke-secondary" stroke-width="1">Working</text>
           <text x="280" y="150" class="fill-primary stroke-secondary" stroke-width="1" clip-path="url(#curveClip)">Working</text>
           <text x="400" y="220" class="fill-secondary" stroke-width="1">Together</text>
@@ -144,8 +145,8 @@
     </section>
 
     <!-- Citation / Quote -->
-    <section class="py-8">
-      <div class="mx-auto w-full max-w-xl border-l-4 border-secondary/80 px-6 py-1 text-xl italic text-secondary/80">
+    <section class="py-8 px-4 sm:px-6">
+      <div class="mx-auto w-full max-w-xl border-l-4 border-secondary/80 px-6 py-1 text-base sm:text-lg md:text-xl italic text-secondary/80">
         <p>
           Although the coaching plan looks like a linear progression, in reality it is an iterative process that allows for ongoing evaluation and readjustment.
         </p>
@@ -153,55 +154,74 @@
     </section>
 
     <!-- Section CheckView et chaîne de validations -->
-    <section id="check-chain-section" class="mx-auto my-12 flex flex-col gap-8 lg:mx-28">
+    <section
+      id="check-chain-section"
+      class="mx-auto my-12 flex flex-col gap-8 px-4 sm:px-6 md:px-12 lg:px-28"
+    >
       <!-- La chaîne sera générée dynamiquement via JavaScript -->
     </section>
 
     <!-- Section DualButton -->
-    <section class="mx-auto flex flex-col-reverse gap-4 lg:flex-row py-8 justify-center">
+    <section class="mx-auto flex flex-col-reverse gap-4 py-8 justify-center items-center lg:flex-row lg:items-center">
       <!-- Bouton de gauche -->
-      <button class="z-10 rounded-full bg-neutral-700 px-8 py-4 text-xl uppercase transition-colors hover:bg-neutral-600">
-        <div class="flex items-center gap-6">
+      <button class="z-10 rounded-full bg-neutral-700 px-8 py-4 text-base sm:text-lg md:text-xl uppercase transition-colors hover:bg-neutral-600">
+        <div class="flex items-center gap-3 sm:gap-6">
           <p>More about my method</p>
-          <img src="assets/icons/click.svg" alt="Click icon" class="hidden w-8 h-8 lg:block" />
+          <img src="assets/icons/click.svg" alt="Click icon" class="hidden w-6 h-6 sm:w-8 sm:h-8 lg:block" />
         </div>
       </button>
       <!-- Bouton de droite -->
-      <button class="rounded-full border-4 border-secondary bg-primary py-4 pl-8 pr-8 text-xl uppercase transition-colors hover:bg-primary/80 lg:ml-[-5rem] lg:pl-16">
-        <div class="flex items-center gap-6">
+      <button class="rounded-full border-4 border-secondary bg-primary py-4 pl-8 pr-8 text-base sm:text-lg md:text-xl uppercase transition-colors hover:bg-primary/80 lg:ml-[-2rem] lg:pl-16">
+        <div class="flex items-center gap-3 sm:gap-6">
           <p>Take appointment now</p>
-          <img src="assets/icons/meet.svg" alt="Click icon" class="hidden w-8 h-8 lg:block" />
+          <img src="assets/icons/meet.svg" alt="Click icon" class="hidden w-6 h-6 sm:w-8 sm:h-8 lg:block" />
         </div>
       </button>
     </section>
 
     <!-- Section ImageWithTextDecorations -->
-    <section class="grid gap-16 px-20 py-16">
-      <h2 class="text-7xl font-black text-secondary">Knowledge</h2>
+    <section class="grid gap-8 sm:gap-16 px-4 py-8 sm:px-8 md:px-12 lg:px-20 lg:py-16">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary text-center lg:text-left">
+        Knowledge
+      </h2>
       <div class="flex flex-col items-center justify-center lg:flex-row lg:items-end lg:justify-start">
-        <img src="assets/images/eva_johnson_outside.png" alt="Eva Johnson at her prime" class="max-w-60 h-96 rounded-bl-[5rem] rounded-tr-[5rem] object-cover" />
-        <div class="mb-8 mt-[-2rem] grid lg:ml-[-2rem] lg:mt-0 lg:gap-4">
-          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">PhD, Dreamland Institule of Business, ongoing</p>
-          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">M.A. Communication Theory, Uni. of Pacific West</p>
-          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">B.A. Philosophy, Psychology, Education, National of Aegean Islands</p>
-          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">M.C.I.S. Media & Information Science, Hudson State University</p>
+        <img
+          src="assets/images/eva_johnson_outside.png"
+          alt="Eva Johnson at her prime"
+          class="max-w-xs sm:max-w-sm md:max-w-md h-72 sm:h-80 md:h-96 rounded-bl-[3rem] sm:rounded-bl-[4rem] md:rounded-bl-[5rem] rounded-tr-[3rem] sm:rounded-tr-[4rem] md:rounded-tr-[5rem] object-cover"
+        />
+        <div class="mb-8 mt-[-2rem] grid gap-2 sm:gap-4 lg:ml-[-2rem] lg:mt-0">
+          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+            PhD, Dreamland Institule of Business, ongoing
+          </p>
+          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+            M.A. Communication Theory, Uni. of Pacific West
+          </p>
+          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+            B.A. Philosophy, Psychology, Education, National of Aegean Islands
+          </p>
+          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+            M.C.I.S. Media & Information Science, Hudson State University
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Section DualText -->
-    <section class="grid gap-16 px-20 py-16">
-      <h2 class="text-center text-7xl font-black text-secondary lg:text-left">Practice</h2>
+    <section class="grid gap-8 sm:gap-16 px-4 py-8 sm:px-8 md:px-12 lg:px-20 lg:py-16">
+      <h2 class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary lg:text-left">
+        Practice
+      </h2>
       <div class="grid justify-center gap-8 lg:justify-normal">
-        <p class="max-w-xl border-l-0 border-new-gray py-2 pl-12 lg:border-l-4">
+        <p class="max-w-xl border-l-0 lg:border-l-4 border-new-gray py-2 pl-0 lg:pl-12 text-center lg:text-left">
           With the use of innovative methods i support professionals to foster their creativity, and develop their potential in public speaking, interpersonal communication and team collaboration.
         </p>
         <div>
-          <p class="max-w-xl border-t-4 border-primary py-8 pl-12 lg:float-right lg:border-l-4 lg:border-t-0">
+          <p
+            class="max-w-xl border-t-4 border-primary py-8 pl-0 sm:pl-4 md:pl-8 lg:pl-12 lg:float-right lg:border-l-4 lg:border-t-0 text-center lg:text-left"
+          >
             Through the years i have trained hundreds of working students in improving their presentation skills, their eloquence and their interpersonal communication.
-            <br>
-            <br>
-            <br>
+            <br><br><br>
             Certified with distinction in coaching individuals, teams, and organizations by the dreamland institute of business.
           </p>
         </div>
@@ -209,9 +229,9 @@
     </section>
 
     <!-- Section Life experience -->
-    <section class="flex items-center justify-center py-8 relative">
-      <div class="mx-8 flex max-w-screen-lg flex-col-reverse gap-8 bg-neutral-700 p-12 shadow-2xl lg:flex-row">
-        <div class="flex flex-col justify-between gap-8 text-center text-sm lg:text-right">
+    <section class="relative flex items-center justify-center py-8 px-4 sm:px-6 md:px-12 lg:px-0">
+      <div class="mx-auto flex max-w-screen-lg flex-col-reverse gap-8 bg-neutral-700 p-4 sm:p-8 md:p-12 shadow-2xl lg:flex-row">
+        <div class="flex flex-col justify-between gap-8 text-center lg:text-right text-sm sm:text-base">
           <p class="max-w-lg leading-7">
             Lived in 2 continents, 3 countries, 5 cities, and many lives. If I were to draw my journey,
             it would look like the branches of a tree: the entrepreneur branch, the artist branch, the writer, the yogi, the dancer.
@@ -219,25 +239,58 @@
           </p>
           <p>Coaching in English, French, and Spanish</p>
         </div>
-        <p class="border-secondary px-4 py-2 text-center text-5xl font-black text-secondary lg:border-l-8 lg:text-left lg:text-7xl">
+        <p class="border-secondary px-4 py-2 text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-secondary lg:border-l-8 lg:text-left">
           Life Experience
         </p>
       </div>
-      <img class="absolute top-0 rotate-[225deg] translate-x-[-6rem]" src="/assets/icons/chevrons.svg" alt="top chveron">
-      <img class="absolute top-0 rotate-[225deg] translate-x-[-8rem]" src="/assets/icons/chevrons.svg" alt="top chveron">
-      <img class="absolute top-0 rotate-[225deg] translate-x-[-10rem]" src="/assets/icons/chevrons.svg" alt="top chveron">
-      <img class="absolute top-0 rotate-[225deg] translate-x-[-12rem]" src="/assets/icons/chevrons.svg" alt="top chveron">
-      <img class="absolute bottom-0 rotate-[225deg] translate-x-24" src="/assets/icons/chevrons.svg" alt="bot chevron">
-      <img class="absolute bottom-0 rotate-[225deg] translate-x-32" src="/assets/icons/chevrons.svg" alt="bot chevron">
-      <img class="absolute bottom-0 rotate-[225deg] translate-x-40" src="/assets/icons/chevrons.svg" alt="bot chevron">
-      <img class="absolute bottom-0 rotate-[225deg] translate-x-48" src="/assets/icons/chevrons.svg" alt="bot chevron">
+      <!-- Chevrons décoratifs -->
+      <img
+        class="absolute top-0 rotate-[225deg] translate-x-[-6rem] hidden sm:block"
+        src="/assets/icons/chevrons.svg"
+        alt="top chevron"
+      >
+      <img
+        class="absolute top-0 rotate-[225deg] translate-x-[-8rem] hidden sm:block"
+        src="/assets/icons/chevrons.svg"
+        alt="top chevron"
+      >
+      <img
+        class="absolute top-0 rotate-[225deg] translate-x-[-10rem] hidden md:block"
+        src="/assets/icons/chevrons.svg"
+        alt="top chevron"
+      >
+      <img
+        class="absolute top-0 rotate-[225deg] translate-x-[-12rem] hidden md:block"
+        src="/assets/icons/chevrons.svg"
+        alt="top chevron"
+      >
+      <img
+        class="absolute bottom-0 rotate-[225deg] translate-x-24 hidden sm:block"
+        src="/assets/icons/chevrons.svg"
+        alt="bottom chevron"
+      >
+      <img
+        class="absolute bottom-0 rotate-[225deg] translate-x-32 hidden sm:block"
+        src="/assets/icons/chevrons.svg"
+        alt="bottom chevron"
+      >
+      <img
+        class="absolute bottom-0 rotate-[225deg] translate-x-40 hidden md:block"
+        src="/assets/icons/chevrons.svg"
+        alt="bottom chevron"
+      >
+      <img
+        class="absolute bottom-0 rotate-[225deg] translate-x-48 hidden md:block"
+        src="/assets/icons/chevrons.svg"
+        alt="bottom chevron"
+      >
     </section>
 
     <!-- Bouton Contact -->
     <section class="mx-auto my-8 text-center">
-      <button class="flex gap-4 rounded-full border-4 border-secondary bg-primary px-8 py-4 text-xl hover:opacity-85 transition-opacity items-center justify-center mx-auto capitalize">
+      <button class="flex gap-2 sm:gap-4 rounded-full border-4 border-secondary bg-primary px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl hover:opacity-85 transition-opacity items-center justify-center mx-auto capitalize">
         CONTACT NOW
-        <img src="assets/icons/meet.svg" alt="Meet icon" class="w-8 h-8" />
+        <img src="assets/icons/meet.svg" alt="Meet icon" class="w-6 h-6 sm:w-8 sm:h-8" />
       </button>
     </section>
   </main>

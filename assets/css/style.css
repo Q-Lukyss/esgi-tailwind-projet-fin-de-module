@@ -1,11 +1,10 @@
-/* VARIABLES */
 @font-face {
   font-family: "Square Pig";
   src: url("../fonts/SquarePeg-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
-:global(*) {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,6 +31,9 @@
   color: #eee2d4;
   font-weight: bold;
   margin-top: 2rem;
+}
+.back:hover {
+  color: #e64a3b;
 }
 
 .content {
@@ -133,7 +135,8 @@ svg {
   transition: background-color 0.3s;
 }
 .page form button:hover {
-  background-color: #1a1a1a;
+  background-color: white;
+  color: #e64a3b;
 }
 @media (max-width: 1024px) {
   .page form button {
@@ -154,6 +157,9 @@ nav .sub {
   display: flex;
   gap: 0.5rem;
 }
+nav .title:hover {
+  color: #e64a3b;
+}
 nav div {
   display: flex;
   align-items: center;
@@ -171,6 +177,9 @@ nav div .links a {
 nav div .links a.active {
   background-color: #e64a3b;
 }
+nav div .links a:hover {
+  background-color: #e64a3b;
+}
 nav div .medias {
   display: flex;
   gap: 1rem;
@@ -182,6 +191,9 @@ nav div .medias a {
   padding: 1rem;
   background-color: #e64a3b;
   border-radius: 50%;
+}
+nav div .medias a:hover {
+  opacity: 80;
 }
 nav div .medias a img {
   width: 1.5rem;
