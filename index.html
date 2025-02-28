@@ -13,7 +13,7 @@
   <script src="assets/js/main.js" defer></script>
   <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
-<body class="flex min-h-screen flex-col bg-background font-raleway text-full-white">
+<body class="flex min-h-screen flex-col bg-dark-blue font-raleway text-white">
 
   <!-- Navbar -->
   <div id="navbar-container"></div>
@@ -50,7 +50,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-36 sm:w-48" viewBox="0 0 120 4">
             <path
               d="M 0 0 L 50 2 L 90 1 L 120 2"
-              class="fill-none stroke-primary"
+              class="fill-none stroke-vibrant-orange"
               stroke-width="3"
             />
           </svg>
@@ -60,18 +60,18 @@
 
     <!-- Section About me & About you -->
     <!-- On centre sur mobile et on augmente le padding uniquement sur grands écrans -->
-    <section class="flex flex-col text-xl text-full-white/90 lg:flex-row">
+    <section class="flex flex-col text-xl text-white/90 lg:flex-row">
       <!-- About me -->
-      <div class="relative flex flex-col justify-between gap-12 border-t-2 border-full-white px-4 py-12 leading-10 sm:px-8 md:px-12 lg:px-28 lg:py-16">
+      <div class="relative flex flex-col justify-between gap-12 border-t-2 border-white px-4 py-12 leading-10 sm:px-8 md:px-12 lg:px-28 lg:py-16">
         <div class="absolute right-0 top-0 z-20 hidden -translate-y-1/2 translate-x-1/2 lg:block">
           <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" aria-label="SVG Point" class="fill-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" aria-label="SVG Point" class="fill-vibrant-orange">
               <circle cx="35" cy="35" r="35" />
             </svg>
           </span>
         </div>
         <div class="flex flex-col gap-8 sm:gap-16 text-center lg:text-left">
-          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-new-gray">About me</h2>
+          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-mygray">About me</h2>
           <p>
             My work is informed by extensive knowledge of communication, psychology and organization
             theories and research. I work through an interdisciplinary lens.
@@ -90,7 +90,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-48 absolute" viewBox="0 0 120 4">
             <path
               d="M 0 0 L 50 2 L 90 1 L 120 2"
-              class="fill-none stroke-primary"
+              class="fill-none stroke-vibrant-orange"
               stroke-width="3"
             />
           </svg>
@@ -98,9 +98,9 @@
       </div>
 
       <!-- About you -->
-      <div class="z-10 flex flex-col justify-between gap-8 sm:gap-16 border-l-0 lg:border-l-2 border-t-2 border-full-white bg-alternace-blue px-4 py-12 leading-10 sm:px-8 md:px-12 lg:mt-[-5rem] lg:px-28 lg:py-16 text-center lg:text-left">
+      <div class="z-10 flex flex-col justify-between gap-8 sm:gap-16 border-l-0 lg:border-l-2 border-t-2 border-white bg-alternate-gray-blue px-4 py-12 leading-10 sm:px-8 md:px-12 lg:mt-[-5rem] lg:px-28 lg:py-16 text-center lg:text-left">
         <div class="flex flex-col gap-8 sm:gap-16">
-          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-new-gray">About you</h2>
+          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-mygray">About you</h2>
           <p>
             You are a busy professional who wants to share ideas more freely, communicate them with an
             impact, feel seen, and be rewarded.
@@ -121,7 +121,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-48 absolute" viewBox="0 0 120 4">
             <path
               d="M 0 0 L 50 2 L 90 1 L 120 2"
-              class="fill-none stroke-primary"
+              class="fill-none stroke-vibrant-orange"
               stroke-width="3"
             />
           </svg>
@@ -132,21 +132,21 @@
     <!-- Section SvgCurved -->
     <section class="py-12">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400">
-        <path id="curvePath" d="M 0 400 L 0 100 Q 500 -100 1000 100 L 1000 350 L 1000 400 Q 900 100 500 90 Q 100 100 0 400 Z" class="fill-primary"/>
+        <path id="curvePath" d="M 0 400 L 0 100 Q 500 -100 1000 100 L 1000 350 L 1000 400 Q 900 100 500 90 Q 100 100 0 400 Z" class="fill-vibrant-orange"/>
         <clipPath id="curveClip">
           <path d="M 0 400 L 0 100 Q 500 -100 1000 100 L 1000 350 L 1000 400 Q 900 100 500 90 Q 100 100 0 400 Z"/>
         </clipPath>
         <g font-family="Arial" font-size="55" sm:font-size="65" md:font-size="75" text-anchor="middle">
-          <text x="280" y="150" class="fill-secondary stroke-secondary" stroke-width="1">Working</text>
-          <text x="280" y="150" class="fill-primary stroke-secondary" stroke-width="1" clip-path="url(#curveClip)">Working</text>
-          <text x="400" y="220" class="fill-secondary" stroke-width="1">Together</text>
+          <text x="280" y="150" class="fill-papyrus stroke-papyrus" stroke-width="1">Working</text>
+          <text x="280" y="150" class="fill-vibrant-orange stroke-papyrus" stroke-width="1" clip-path="url(#curveClip)">Working</text>
+          <text x="400" y="220" class="fill-papyrus" stroke-width="1">Together</text>
         </g>
       </svg>
     </section>
 
     <!-- Citation / Quote -->
     <section class="py-8 px-4 sm:px-6">
-      <div class="mx-auto w-full max-w-xl border-l-4 border-secondary/80 px-6 py-1 text-base sm:text-lg md:text-xl italic text-secondary/80">
+      <div class="mx-auto w-full max-w-xl border-l-4 border-papyrus/80 px-6 py-1 text-base sm:text-lg md:text-xl italic text-papyrus/80">
         <p>
           Although the coaching plan looks like a linear progression, in reality it is an iterative process that allows for ongoing evaluation and readjustment.
         </p>
@@ -171,7 +171,7 @@
         </div>
       </button>
       <!-- Bouton de droite -->
-      <button class="rounded-full border-4 border-secondary bg-primary py-4 pl-8 pr-8 text-base sm:text-lg md:text-xl uppercase transition-colors hover:bg-primary/80 lg:ml-[-2rem] lg:pl-16">
+      <button class="rounded-full border-4 border-papyrus bg-vibrant-orange py-4 pl-8 pr-8 text-base sm:text-lg md:text-xl uppercase transition-colors hover:bg-vibrant-orange/80 lg:ml-[-2rem] lg:pl-16">
         <div class="flex items-center gap-3 sm:gap-6">
           <p>Take appointment now</p>
           <img src="assets/icons/meet.svg" alt="Click icon" class="hidden w-6 h-6 sm:w-8 sm:h-8 lg:block" />
@@ -181,7 +181,7 @@
 
     <!-- Section ImageWithTextDecorations -->
     <section class="grid gap-8 sm:gap-16 px-4 py-8 sm:px-8 md:px-12 lg:px-20 lg:py-16">
-      <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary text-center lg:text-left">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-papyrus text-center lg:text-left">
         Knowledge
       </h2>
       <div class="flex flex-col items-center justify-center lg:flex-row lg:items-end lg:justify-start">
@@ -191,16 +191,16 @@
           class="max-w-xs sm:max-w-sm md:max-w-md h-72 sm:h-80 md:h-96 rounded-bl-[3rem] sm:rounded-bl-[4rem] md:rounded-bl-[5rem] rounded-tr-[3rem] sm:rounded-tr-[4rem] md:rounded-tr-[5rem] object-cover"
         />
         <div class="mb-8 mt-[-2rem] grid gap-2 sm:gap-4 lg:ml-[-2rem] lg:mt-0">
-          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+          <p class="border-b-4 border-white bg-vibrant-orange px-4 py-2 text-sm sm:text-base md:text-xl">
             PhD, Dreamland Institule of Business, ongoing
           </p>
-          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+          <p class="border-b-4 border-white bg-vibrant-orange px-4 py-2 text-sm sm:text-base md:text-xl">
             M.A. Communication Theory, Uni. of Pacific West
           </p>
-          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+          <p class="border-b-4 border-white bg-vibrant-orange px-4 py-2 text-sm sm:text-base md:text-xl">
             B.A. Philosophy, Psychology, Education, National of Aegean Islands
           </p>
-          <p class="border-b-4 border-full-white bg-primary px-4 py-2 text-sm sm:text-base md:text-xl">
+          <p class="border-b-4 border-white bg-vibrant-orange px-4 py-2 text-sm sm:text-base md:text-xl">
             M.C.I.S. Media & Information Science, Hudson State University
           </p>
         </div>
@@ -209,16 +209,16 @@
 
     <!-- Section DualText -->
     <section class="grid gap-8 sm:gap-16 px-4 py-8 sm:px-8 md:px-12 lg:px-20 lg:py-16">
-      <h2 class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary lg:text-left">
+      <h2 class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-papyrus lg:text-left">
         Practice
       </h2>
       <div class="grid justify-center gap-8 lg:justify-normal">
-        <p class="max-w-xl border-l-0 lg:border-l-4 border-new-gray py-2 pl-0 lg:pl-12 text-center lg:text-left">
+        <p class="max-w-xl border-l-0 lg:border-l-4 border-mygray py-2 pl-0 lg:pl-12 text-center lg:text-left">
           With the use of innovative methods i support professionals to foster their creativity, and develop their potential in public speaking, interpersonal communication and team collaboration.
         </p>
         <div>
           <p
-            class="max-w-xl border-t-4 border-primary py-8 pl-0 sm:pl-4 md:pl-8 lg:pl-12 lg:float-right lg:border-l-4 lg:border-t-0 text-center lg:text-left"
+            class="max-w-xl border-t-4 border-vibrant-orange py-8 pl-0 sm:pl-4 md:pl-8 lg:pl-12 lg:float-right lg:border-l-4 lg:border-t-0 text-center lg:text-left"
           >
             Through the years i have trained hundreds of working students in improving their presentation skills, their eloquence and their interpersonal communication.
             <br><br><br>
@@ -239,7 +239,7 @@
           </p>
           <p>Coaching in English, French, and Spanish</p>
         </div>
-        <p class="border-secondary px-4 py-2 text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-secondary lg:border-l-8 lg:text-left">
+        <p class="border-papyrus px-4 py-2 text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-papyrus lg:border-l-8 lg:text-left">
           Life Experience
         </p>
       </div>
@@ -288,7 +288,7 @@
 
     <!-- Bouton Contact -->
     <section class="mx-auto my-8 text-center">
-      <button class="flex gap-2 sm:gap-4 rounded-full border-4 border-secondary bg-primary px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl hover:opacity-85 transition-opacity items-center justify-center mx-auto capitalize">
+      <button class="flex gap-2 sm:gap-4 rounded-full border-4 border-papyrus bg-vibrant-orange px-4 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl hover:opacity-85 transition-opacity items-center justify-center mx-auto capitalize">
         CONTACT NOW
         <img src="assets/icons/meet.svg" alt="Meet icon" class="w-6 h-6 sm:w-8 sm:h-8" />
       </button>

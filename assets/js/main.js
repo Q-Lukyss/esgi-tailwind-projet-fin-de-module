@@ -46,7 +46,6 @@ function initNavbarLinks() {
     const a = document.createElement("a");
     a.href = link.href;
     a.textContent = link.name;
-    // Couleurs refactorisées (primary => vibrant-orange)
     a.className = "px-3 py-2 transition-colors hover:bg-vibrant-orange text-white";
     if (currentPath === link.href) {
       a.classList.add("bg-vibrant-orange");
@@ -71,7 +70,7 @@ function initNavbarMedias() {
   medias.forEach(media => {
     const a = document.createElement("a");
     a.href = media.href;
-    // Couleur de fond refactorisée (bg-primary => bg-vibrant-orange)
+
     a.className = "rounded-full bg-vibrant-orange p-4 transition-colors hover:bg-vibrant-orange/70";
 
     const img = document.createElement("img");
@@ -131,7 +130,7 @@ function renderCheckView(check, compact = true) {
   img.className = "w-12 h-12";
   header.appendChild(img);
 
-  // Anciennement text-secondary => text-papyrus
+
   const title = document.createElement("p");
   title.className = "text-center text-3xl font-black text-papyrus lg:text-left italic";
   title.innerHTML = check.name.replace(/\n/g, "<br>");
@@ -139,7 +138,7 @@ function renderCheckView(check, compact = true) {
 
   container.appendChild(header);
 
-  // Anciennement text-new-gray => text-mygray
+
   const content = document.createElement("p");
   content.className = "text-center text-mygray lg:text-left";
   content.textContent = check.content;
