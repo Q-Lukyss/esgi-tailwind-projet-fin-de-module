@@ -1,258 +1,297 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
-  <base href="/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About Me</title>
+    <base href="/" />
 
-  <!-- Google Fonts (ex: Raleway, Square Peg) -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/assets/js/main.js" defer></script>
-  <link rel="stylesheet" href="assets/css/tailwind.css">
-  
-</head>
-<body class="bg-background font-raleway text-full-black">
-
-  <!-- NAVBAR -->
-  <div id="navbar-container"></div>
-
-  <main>
-    <!-- Image de couverture -->
-    <img
-      src="assets/images/gymnasium_meet.png"
-      alt="Gymnasium meet"
-      class="w-full object-cover"
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <!-- IMPORTANT : on charge main.js APRES ce script, si on veut tailwind.config appliqué -->
+    <script src="/assets/js/main.js" defer></script>
+  </head>
 
-    <!-- Titre "About me !" en mobile -->
-    <div class="bg-primary px-10 py-8 lg:hidden">
-      <p class="font-square-peg text-7xl">About me !</p>
-    </div>
+  <body class="bg-dark-blue font-raleway text-alternate-gray-blue">
+    <!-- NAVBAR (injecté dynamiquement) -->
+    <div id="navbar-container"></div>
 
-    <!-- Bloc principal "About me" -->
-    <div
-      class="relative flex flex-col gap-16 bg-secondary px-16 py-8 text-lg leading-10 text-full-black lg:flex-row lg:px-28"
-    >
-      <!-- Colonne de gauche -->
-      <div class="flex flex-col gap-8">
-        <!-- Titre "About me !" en desktop (cercle) -->
-        <div
-          class="absolute left-20 top-[-2rem] hidden rounded-full border-8 border-secondary bg-primary px-10 lg:block"
-        >
-          <p class="scale-[2] px-8 pb-3 font-square-peg text-5xl text-secondary">
-            About me !
+    <main>
+      <!-- Image de couverture -->
+      <img
+        src="assets/images/gymnasium_meet.png"
+        alt="Gymnasium meet"
+        class="w-full object-cover"
+      />
+
+      <!-- Titre "About me !" en mobile -->
+      <div class="bg-vibrant-orange px-4 py-8 lg:hidden text-center">
+        <p class="font-square-peg text-5xl text-papyrus">About me !</p>
+      </div>
+
+      <!-- Bloc principal "About me" -->
+      <div
+        class="relative flex flex-col gap-16 bg-papyrus px-6 py-10 text-base leading-7
+               md:gap-20 md:px-10 md:py-14 md:text-lg
+               lg:flex-row lg:gap-24 lg:px-16 lg:py-20"
+      >
+        <!-- Colonne de gauche -->
+        <div class="flex flex-col gap-8 md:gap-12">
+          <!-- Titre "About me !" en desktop (cercle) -->
+          <div
+            class="hidden lg:block lg:absolute lg:left-20 lg:top-[-2rem]
+                   rounded-full border-4 border-papyrus bg-vibrant-orange px-36 py-1 pb-3"
+          >
+            <p class="scale-[2] px-8 pb-3 font-square-peg text-5xl text-papyrus">
+              About me !
+            </p>
+          </div>
+
+          <p>
+            My work is informed by extensive knowledge of communication,
+            psychology and organization theories and research. I work
+            through an interdisciplinary lens.
+          </p>
+
+          <h2 class="text-2xl font-black">A Personal Approach</h2>
+          <p>
+            In my coaching practice, I prioritize a personalized and
+            tailored approach to help you achieve your goals. By
+            understanding your unique strengths, challenges, and
+            aspirations, I work closely with you to develop a customized
+            plan that aligns with your individual needs.
+          </p>
+          <p>
+            Through one-on-one sessions, we will explore your potential,
+            address obstacles, and foster growth in a way that is
+            meaningful and impactful to you. Your journey towards personal
+            and professional development is important to me, and I am
+            committed to guiding and supporting you every step of the way.
           </p>
         </div>
-        <br />
-        <br class="hidden lg:block" />
-        <p>
-          My work is informed by extensive knowledge of communication,
-          psychology and organization theories and research. I work
-          through an interdisciplinary lens.
-        </p>
-        <h2 class="text-2xl font-bold">A Personal Approach</h2>
-        <p>
-          In my coaching practice, I prioritize a personalized and
-          tailored approach to help you achieve your goals. By
-          understanding your unique strengths, challenges, and
-          aspirations, I work closely with you to develop a customized
-          plan that aligns with your individual needs.
-        </p>
-        <p>
-          Through one-on-one sessions, we will explore your potential,
-          address obstacles, and foster growth in a way that is
-          meaningful and impactful to you. Your journey towards personal
-          and professional development is important to me, and I am
-          committed to guiding and supporting you every step of the way.
-        </p>
+
+        <!-- Colonne de droite -->
+        <div class="flex flex-col gap-8 md:gap-12">
+          <h2 class="text-2xl font-black">Knowledge</h2>
+          <p>
+            As a professional coach, I firmly believe in the power of
+            knowledge as the cornerstone of personal and professional
+            growth.
+          </p>
+          <p>
+            Trained and certified with distinction in Coaching Individuals,
+            Teams, and Organizations. Through the use of innovative
+            methods I support learners to foster their creativity, and
+            develop their potential in public speaking, interpersonal
+            communication and team collaboration.
+          </p>
+          <h2 class="text-2xl font-black">Personalization</h2>
+          <p>
+            Lived in 2 different continents, 3 different countries, 5
+            different cities, and many lives. If I were to draw my journey,
+            it would not look like a straight line. It would look like the
+            branches of a tree: the entrepreneur branch, the artist branch,
+            the writer, the yogi, the dancer. I bring to work my whole
+            self, the entire tree, with all the lessons learned.
+          </p>
+        </div>
       </div>
 
-      <!-- Colonne de droite -->
-      <div class="flex flex-col gap-8">
-        <h2 class="text-2xl font-bold">Knowledge</h2>
-        <p>
-          As a professional coach, I firmly believe in the power of
-          knowledge as the cornerstone of personal and professional
-          growth.
-        </p>
-        <p>
-          Trained and certified with distinction in Coaching Individuals,
-          Teams, and Organizations. Through the use of innovative
-          methods I support learners to foster their creativity, and
-          develop their potential in public speaking, interpersonal
-          communication and team collaboration.
-        </p>
-        <h2 class="text-2xl font-bold">Personalization</h2>
-        <p>
-          Lived in 2 different continents, 3 different countries, 5
-          different cities, and many lives. If I were to draw my journey,
-          it would not look like a straight line. It would look like the
-          branches of a tree: the entrepreneur branch, the artist branch,
-          the writer, the yogi, the dancer. I bring to work my whole
-          self, the entire tree, with all the lessons learned.
-        </p>
-      </div>
-    </div>
-
-    <!-- Section Testimonials -->
-    <div class="flex flex-col gap-28 overflow-x-hidden py-10 lg:py-28">
-      <h1 class="ml-16 text-7xl font-extrabold text-secondary lg:text-9xl">
-        Testimonials
-      </h1>
-
-      <!-- Conteneur principal des slides (position relative pour le pseudo-élément "before") -->
+      <!-- Section Testimonials -->
       <div
-        id="testimonial-container"
-        class="relative flex w-screen scale-100 flex-col gap-4 lg:scale-110 lg:flex-row
-               before:absolute before:inset-0 before:bg-gradient-to-r before:from-background before:via-transparent before:to-background"
+        class="flex flex-col gap-12 overflow-x-hidden py-8
+               md:gap-16 md:py-16
+               lg:gap-28 lg:py-28"
       >
-        <!-- Les slides et les boutons de navigation seront injectés via JS -->
+        <h1 class="ml-4 text-5xl font-black text-papyrus md:ml-16 md:text-7xl lg:text-9xl">
+          Testimonials
+        </h1>
+
+        <!-- Conteneur principal du carrousel -->
+        <div
+          id="testimonial-container"
+          class="relative flex w-screen flex-col gap-4
+                 px-4          <!-- un peu de padding horizontal -->
+                 md:scale-100 lg:scale-105 lg:px-16 lg:flex-row
+                 before:absolute before:inset-0 before:bg-gradient-to-r before:from-dark-blue before:via-transparent before:to-dark-blue"
+        >
+          <!-- Les slides + boutons de navigation sont injectés via JS -->
+        </div>
       </div>
-    </div>
 
-    <!-- Bouton "Back to main page" -->
-    <a
-      href="/"
-      class="my-16 ml-28 flex items-center gap-10"
-    >
-      <img
-        src="assets/icons/chevrons.svg"
-        alt="Back to main page"
-      />
-      <p class="text-4xl font-bold text-secondary">Back to main page</p>
-    </a>
-  </main>
+      <!-- Bouton "Back to main page" (injecté dynamiquement) -->
+      <div id="back-main-page-container"></div>
+    </main>
 
-  <!-- FOOTER -->
-  <div id="footer-container"></div>
+    <!-- FOOTER (injecté dynamiquement) -->
+    <div id="footer-container"></div>
 
-  <!-- Script JS pour les témoignages -->
-  <script>
-    // Tableau des témoignages
-    const testamonials = [
-      {
-        name: "Brian H",
-        job: "Artist",
-        text: "Eva Johnson is a true gem in the world of coaching. Her wisdom and encouragement have empowered me to overcome obstacles and step into my authentic self. I am grateful for the positive impact she has had on my journey.",
-        src: "assets/images/person_1.jpg"
-      },
-      {
-        name: "Steven S",
-        job: "Journalist",
-        text: "Working with Eva Johnson has been a transformative experience. Her guidance and support have helped me unlock my full potential and achieve my goals with confidence.",
-        src: "assets/images/person_2.png"
-      },
-      {
-        name: "Sarah J",
-        job: "Architect",
-        text: "Eva's coaching style is not only motivating but also deeply insightful. She has a unique ability to challenge me to grow while providing a safe space for self-discovery and reflection.",
-        src: "assets/images/person_3.png"
-      },
-      {
-        name: "Davis S",
-        job: "Software Engineer",
-        text: "I can't recommend Eva enough! Her expertise and empathy have been instrumental in helping me navigate challenges and make meaningful progress in both my personal and professional life.",
-        src: "assets/images/person_4.jpg"
+    <script>
+      /* ================================
+         Données de témoignages
+         ================================ */
+      const testamonials = [
+        {
+          name: "Brian H",
+          job: "Artist",
+          text: "Eva Johnson is a true gem in the world of coaching...",
+          src: "assets/images/person.jpg"
+        },
+        {
+          name: "Steven S",
+          job: "Journalist",
+          text: "Working with Eva Johnson has been a transformative experience...",
+          src: "assets/images/person_2.png"
+        },
+        {
+          name: "Sarah J",
+          job: "Architect",
+          text: "Eva's coaching style is not only motivating but also deeply insightful...",
+          src: "assets/images/person_3.png"
+        },
+        {
+          name: "Davis S",
+          job: "Software Engineer",
+          text: "I can't recommend Eva enough! Her expertise and empathy have been instrumental...",
+          src: "assets/images/person_4.jpg"
+        }
+      ];
+
+      let currentIndex = 0;
+      const container = document.getElementById("testimonial-container");
+      let autoSlideInterval = null;
+
+      /* ================================
+         Création d'une diapositive
+         ================================ */
+      function createSlide(testimonial, index) {
+        // Sur desktop (lg:), on affiche TOUTES les slides côte à côte.
+        // Sur mobile, on n’affiche QUE la slide active.
+        const isDesktop = window.innerWidth >= 1024; // lg = 1024px par défaut
+
+        // Conteneur principal
+        const slide = document.createElement("div");
+        slide.classList.add(
+          "mx-auto",            // centre horizontalement en mobile
+          "flex",               // en desktop, elles seront côte à côte
+          "flex-col",
+          "justify-between",
+          "gap-2",
+          "rounded",
+          "bg-mygray",
+          "px-10",
+          "py-8",
+          "transition-all",
+          "duration-300",
+          "shadow-lg"
+        );
+        // Largeur fixe (ou adaptative)
+        // On peut forcer w-80 ou w-96 selon design
+        slide.classList.add("w-80", "md:w-96");
+
+        // Si on est en mobile + la slide n’est pas l’active => on la masque
+        if (!isDesktop && index !== currentIndex) {
+          slide.classList.add("hidden");
+        }
+
+        // Image du testimonial (en rond, en haut ?)
+        const imgEl = document.createElement("img");
+        imgEl.src = testimonial.src;
+        imgEl.alt = testimonial.name;
+        imgEl.className = "mx-auto w-20 h-20 rounded-full object-cover mb-2";
+        slide.appendChild(imgEl);
+
+        // Citation
+        const quote = document.createElement("p");
+        quote.className = "text-center text-sm italic leading-5 md:text-base";
+        quote.textContent = `"${testimonial.text}"`;
+        slide.appendChild(quote);
+
+        // Nom + Job
+        const nameEl = document.createElement("p");
+        nameEl.className = "text-center font-square-peg text-5xl mt-4";
+        nameEl.textContent = testimonial.name;
+        slide.appendChild(nameEl);
+
+        const jobEl = document.createElement("p");
+        jobEl.className = "text-center text-sm mt-1";
+        jobEl.textContent = testimonial.job;
+        slide.appendChild(jobEl);
+
+        return slide;
       }
-    ];
 
-    let currentIndex = 0;
-    const container = document.getElementById("testimonial-container");
+      /* ================================
+         Pastilles de navigation (mobile)
+         ================================ */
+      function createNavDots() {
+        // Sur desktop, on masque les dots
+        const dotsWrapper = document.createElement("div");
+        dotsWrapper.className = "mx-auto mt-4 flex gap-3 lg:hidden";
 
-    // Fonction pour créer un slide
-    function createSlide(testimonial, isActive) {
-      // Conteneur principal
-      const slide = document.createElement("div");
-      slide.className = `mx-auto w-96 flex-col justify-between gap-2
-        rounded bg-new-gray px-10 py-8 lg:mx-auto
-        ${isActive ? "flex" : "hidden"}`;
+        testamonials.forEach((_, i) => {
+          const dot = document.createElement("button");
+          dot.ariaLabel = "Testimonial dot";
+          dot.className = "w-4 h-4 rounded-full bg-vibrant-orange transition-opacity hover:opacity-80";
+          dot.style.opacity = i === currentIndex ? "1" : "0.35";
 
-      // Citation
-      const quote = document.createElement("p");
-      quote.className = "px-4 text-center text-xs font-normal italic";
-      quote.textContent = `"${testimonial.text}"`;
-
-      // Bas du slide (nom, job, photo)
-      const bottom = document.createElement("div");
-      bottom.className = "flex items-center justify-between";
-
-      const leftPart = document.createElement("div");
-      leftPart.className = "flex flex-col gap-1";
-
-      const nameEl = document.createElement("p");
-      nameEl.className = "font-square-peg text-6xl";
-      nameEl.textContent = testimonial.name;
-
-      const jobEl = document.createElement("p");
-      jobEl.className = "text-sm";
-      jobEl.textContent = testimonial.job;
-
-      leftPart.appendChild(nameEl);
-      leftPart.appendChild(jobEl);
-
-      const imgEl = document.createElement("img");
-      imgEl.src = testimonial.src;
-      imgEl.alt = testimonial.name;
-      // Pour remplacer "size-16", on peut mettre w-16 h-16
-      imgEl.className = "w-16 h-16 rounded-full object-cover";
-
-      bottom.appendChild(leftPart);
-      bottom.appendChild(imgEl);
-
-      // Assembler
-      slide.appendChild(quote);
-      slide.appendChild(bottom);
-      return slide;
-    }
-
-    // Fonction pour créer les petits boutons (mobile only)
-    function createNavButtons() {
-      const btnContainer = document.createElement("div");
-      btnContainer.className = "mx-auto flex gap-2 lg:hidden";
-
-      testamonials.forEach((_, i) => {
-        const btn = document.createElement("button");
-        btn.ariaLabel = "Testimonial";
-        btn.className =
-          "w-4 h-4 rounded-full bg-primary transition-opacity hover:opacity-80";
-        btn.style.opacity = i === currentIndex ? "1" : "0.35";
-
-        btn.addEventListener("click", () => {
-          currentIndex = i;
-          renderSlides();
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            renderSlides();
+          });
+          dotsWrapper.appendChild(dot);
         });
-        btnContainer.appendChild(btn);
+        return dotsWrapper;
+      }
+
+      /* ================================
+         Rendu de toutes les slides
+         ================================ */
+      function renderSlides() {
+        // On vide
+        container.innerHTML = "";
+
+        // Crée chaque slide
+        testamonials.forEach((testimonial, i) => {
+          const slide = createSlide(testimonial, i);
+          container.appendChild(slide);
+        });
+
+        // Ajout des pastilles (mobile seulement)
+        container.appendChild(createNavDots());
+      }
+
+      /* ================================
+         Auto-slide (mobile) toutes les 5s
+         ================================ */
+      function startAutoSlide() {
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+          if (window.innerWidth < 1024) {
+            // On ne fait l'auto-slide que sur mobile
+            currentIndex = (currentIndex + 1) % testamonials.length;
+            renderSlides();
+          }
+        }, 5000);
+      }
+
+      /* ================================
+         Gérer le redimensionnement
+         ================================ */
+      window.addEventListener("resize", () => {
+        // On recalcule l'affichage pour repasser
+        // du mode "une slide" au mode "toutes les slides"
+        renderSlides();
       });
 
-      return btnContainer;
-    }
-
-    // Fonction qui rend tous les slides
-    function renderSlides() {
-      // Vider le container
-      container.innerHTML = "";
-
-      // Créer chaque slide
-      testamonials.forEach((t, i) => {
-        const slide = createSlide(t, i === currentIndex);
-        container.appendChild(slide);
-      });
-
-      // Ajouter le conteneur de boutons de nav (mobile)
-      const btns = createNavButtons();
-      container.appendChild(btns);
-    }
-
-    // Changer de slide toutes les 5 secondes
-    setInterval(() => {
-      currentIndex = currentIndex === testamonials.length - 1 ? 0 : currentIndex + 1;
+      // Premier rendu
       renderSlides();
-    }, 5000);
-
-    // Premier rendu
-    renderSlides();
-  </script>
-</body>
+      startAutoSlide();
+    </script>
+  </body>
 </html>
