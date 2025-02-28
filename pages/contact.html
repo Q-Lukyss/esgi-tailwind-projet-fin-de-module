@@ -1,64 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Eva Johnson</title>
-  <link rel="stylesheet" href="scss.css">
+  
+  <!-- Pour que les chemins relatifs soient résolus depuis la racine -->
+  <base href="/" />
+
+  <!-- Import Google Fonts pour Raleway et Square Pig -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&display=swap">
+  
+  <!-- Lien vers votre CSS compilé depuis style.scss -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="header__logo">
-        Eva Johnson
-        <span class="header__subtitle">COMMUNICATION EXPERT • COACH • EDUCATOR</span>
+  <div class="base">
+    <!-- Navigation -->
+    <nav>
+      <div>
+        <a class="square-peg" href="/">Eva Johnson</a>
+        <img class="show-phone" src="assets/icons/hamburger.svg" alt="Menu" />
+        <div class="hide-phone">
+          <div class="links">
+            <a href="/">Home</a>
+            <a href="/about">About me</a>
+            <a href="/working">Working together</a>
+            <a href="/contact" class="active">Contact</a>
+          </div>
+        </div>
+        <div class="hide-phone">
+          <div class="medias">
+            <a href="mailto:eva.johnson@outlook.com">
+              <img src="assets/icons/mail.svg" alt="Email" />
+            </a>
+            <a href="https://www.linkedin.com/in/eva-johnson">
+              <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="tel:+1234567890">
+              <img src="assets/icons/phone.svg" alt="Phone" />
+            </a>
+          </div>
+        </div>
       </div>
-      <nav class="header__nav">
-        <a href="../index.html">Home</a>
-        <a href="./about.html">About Me</a>
-        <a href="./working-together.html">Working Together</a>
-        <a href="./contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
+      <p class="sub">
+        Communication expert
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" class="fill-primary">
+            <circle cx="5" cy="5" r="5" />
+          </svg>
+        </span>
+        Coach
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" class="fill-primary">
+            <circle cx="5" cy="5" r="5" />
+          </svg>
+        </span>
+        Educator
+      </p>
+    </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Contact!</h1>
-  </section>
-
-  <!-- FORM -->
-  <section class="contact">
-    <div class="container">
-      <div class="contact__info">
-        <img src="https://via.placeholder.com/300x400?text=Portrait" alt="Eva Johnson" class="contact__image">
-        <h2>Let's work together</h2>
+    <!-- Contenu principal -->
+    <div class="content">
+      <div>
+        <div class="page">
+          <div>
+            <p class="title">Let's work together</p>
+            <form>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+              <input type="email" id="email" name="email" placeholder="Your email" />
+              <textarea id="message" name="message" placeholder="Share your thoughts"></textarea>
+              <div>
+                <button type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+          <div class="image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" height="600">
+              <defs>
+                <mask id="fadeMask" x="0" y="0" width="1" height="1">
+                  <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="70%" stop-color="white" />
+                    <stop offset="95%" stop-color="black" />
+                  </linearGradient>
+                  <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" />
+                </mask>
+              </defs>
+              <rect id="start-rect" x="0" y="191" width="15" height="15" fill="red" />
+              <path d="M 0 200 Q 80 241 300 250 Q 581 240 590 301" fill="none" stroke="red" stroke-width="3" />
+              <image mask="url(#fadeMask)" href="assets/images/eva_johnson_contact.png" x="150" />
+              <path d="M 200 600 Q -100 500 350 430 Q 590 380 590 300" fill="none" stroke="red" stroke-width="3" />
+            </svg>
+            <div id="plus-medias">
+              <a href="mailto:eva.johnson@outlook.com">
+                <img src="assets/icons/mail.svg" alt="Email" />
+              </a>
+              <a href="https://www.linkedin.com/in/eva-johnson">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+              </a>
+              <a href="tel:+1234567890">
+                <img src="assets/icons/phone.svg" alt="Phone" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="back">
+          <img src="assets/icons/chevrons.svg" alt="Back to main page" />
+          Back to main page
+        </p>
       </div>
-      <form class="contact__form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Share your thoughts" required></textarea>
-        <button type="submit">Send</button>
-      </form>
     </div>
-  </section>
 
-  <!-- SOCIAL LINKS -->
-  <section class="social">
-    <div class="container">
-      <a href="#" class="social__icon email"></a>
-      <a href="#" class="social__icon linkedin"></a>
-      <a href="#" class="social__icon phone"></a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <a href="index.html" class="footer__back">«« Back to main page</a>
-    <p>eva-johnson.dev</p>
-  </footer>
-
+    <footer>
+      <a href="#">eva-johnson.dev</a>
+    </footer>
+  </div>
 </body>
 </html>

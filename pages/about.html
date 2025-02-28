@@ -1,230 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Eva Johnson</title>
-  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <title>About Me</title>
+  <base href="/">
+
+  <!-- Google Fonts (ex: Raleway, Square Peg) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Votre fichier Tailwind compilé (contenant vos couleurs/paramètres personnalisés) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
-  
-  <!-- HEADER / NAVBAR -->
-  <header class="bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <!-- Logo + Sous-titre -->
-      <div>
-        <div class="text-2xl font-bold">Eva Johnson</div>
-        <div class="text-sm text-gray-300">
-          COMMUNICATION EXPERT • COACH • EDUCATOR
-        </div>
-      </div>
+<body class="bg-background font-raleway text-full-black">
 
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex space-x-6 items-center">
-        <a href="../index.html" class="hover:text-red-400">Home</a>
-        <a href="./about.html" class="text-red-400 font-semibold">About Me</a>
-        <a href="./working-together.html" class="hover:text-red-400">Working Together</a>
-        <a href="./contact.html" class="hover:text-red-400">Contact</a>
-        <!-- Réseaux sociaux/icônes de contact -->
-        <div class="flex space-x-4 pl-4">
-          <!-- Email icon -->
-          <a href="#" class="hover:text-red-400">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <!-- placeholder icon -->
-              <path d="M..." />
-            </svg>
-          </a>
-          <!-- LinkedIn icon -->
-          <a href="#" class="hover:text-red-400">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <!-- placeholder icon -->
-              <path d="M..." />
-            </svg>
-          </a>
-          <!-- Phone icon -->
-          <a href="#" class="hover:text-red-400">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <!-- placeholder icon -->
-              <path d="M..." />
-            </svg>
-          </a>
-        </div>
-      </nav>
+  <!-- NAVBAR (optionnel si vous en avez besoin sur la page About)
+  <nav class="bg-neutral-800 p-4 text-white">
+    <div class="container mx-auto">
+      <h1 class="text-2xl font-bold">Navbar - About</h1>
+    </div>
+  </nav>
+  -->
 
-      <!-- Bouton hamburger pour mobile -->
-      <button 
-        class="md:hidden flex flex-col space-y-1 focus:outline-none"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
-        <span class="w-6 h-0.5 bg-gray-100"></span>
-        <span class="w-6 h-0.5 bg-gray-100"></span>
-        <span class="w-6 h-0.5 bg-gray-100"></span>
-      </button>
+  <main>
+    <!-- Image de couverture -->
+    <img
+      src="assets/images/gymnasium_meet.png"
+      alt="Gymnasium meet"
+      class="w-full object-cover"
+    />
+
+    <!-- Titre "About me !" en mobile -->
+    <div class="bg-primary px-10 py-8 lg:hidden">
+      <p class="font-square-peg text-7xl">About me !</p>
     </div>
 
-    <!-- Menu Mobile (défaut: hidden) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pb-4">
-      <nav class="flex flex-col space-y-2">
-        <a href="index.html" class="hover:text-red-400">Home</a>
-        <a href="about.html" class="text-red-400 font-semibold">About Me</a>
-        <a href="#" class="hover:text-red-400">Working Together</a>
-        <a href="#" class="hover:text-red-400">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO AVEC IMAGE DE FOND -->
-  <section 
-    class="relative bg-center bg-cover bg-no-repeat"
-    style="background-image: url('https://via.placeholder.com/1600x600?text=About+Hero'); min-height: 40vh;">
-    <!-- Voile sombre si besoin -->
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-    <!-- Contenu du hero -->
-    <div class="relative flex items-center justify-center h-full max-w-7xl mx-auto px-4 py-8">
-      <!-- Petit label "About me!" dans un style arrondi -->
-      <div class="bg-red-500 px-6 py-2 rounded-full inline-block">
-        <h1 class="text-white text-2xl md:text-3xl font-bold">About me !</h1>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION PRINCIPALE (DESCRIPTION) -->
-  <section class="bg-[#f5e7d3] text-gray-900 py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Colonne GAUCHE -->
-        <div>
-          <p class="mb-6">
-            <strong>My work</strong> is informed by extensive knowledge of communication, 
-            psychology and organization theories and research. I work through an interdisciplinary lens.
-          </p>
-          <h2 class="text-xl md:text-2xl font-bold mb-3">A Personal Approach</h2>
-          <p class="mb-6">
-            In my coaching practice, I prioritize a personalized and tailored approach
-            to help you achieve your goals. By understanding your unique strengths,
-            challenges, and aspirations, I work closely with you to develop a customized plan
-            that aligns with your individual needs.
-          </p>
-          <p class="mb-6">
-            Through one-on-one sessions, we will explore your potential, address obstacles, 
-            and foster growth in a way that is meaningful and impactful to you. 
-            Your journey towards personal and professional development is important to me,
-            and I am committed to guiding and supporting you every step of the way.
+    <!-- Bloc principal "About me" -->
+    <div
+      class="relative flex flex-col gap-16 bg-secondary px-16 py-8 text-lg leading-10 text-full-black lg:flex-row lg:px-28"
+    >
+      <!-- Colonne de gauche -->
+      <div class="flex flex-col gap-8">
+        <!-- Titre "About me !" en desktop (cercle) -->
+        <div
+          class="absolute left-20 top-[-2rem] hidden rounded-full border-8 border-secondary bg-primary px-10 lg:block"
+        >
+          <p class="scale-[2] px-8 pb-3 font-square-peg text-5xl text-secondary">
+            About me !
           </p>
         </div>
-
-        <!-- Colonne DROITE -->
-        <div>
-          <h2 class="text-xl md:text-2xl font-bold mb-3">Knowledge</h2>
-          <p class="mb-6">
-            As a professional coach, I firmly believe in the power of knowledge 
-            as the cornerstone of personal and professional growth.
-            Trained and certified with distinction in Coaching Individuals, Teams, 
-            and Organizations. Through the use of innovative methods I support learners 
-            to foster their creativity, and develop their potential in public speaking, 
-            interpersonal communication and team collaboration.
-          </p>
-
-          <h2 class="text-xl md:text-2xl font-bold mb-3">Personnalization</h2>
-          <p>
-            Lived in 2 different continents, 3 different countries, 5 different cities, 
-            and many lives. If I were to draw my journey, it would not look like a straight line.
-            It would look like the branches of a tree: the entrepreneur branch, the artist branch, 
-            the writer, the yogi, the dancer. I bring to work my whole self, the entire tree, 
-            with all the lessons learned.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION TESTIMONIALS -->
-  <section class="bg-gray-900 text-gray-100 py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <!-- Titre "Testimonials" -->
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Testimonials</h2>
-      <!-- Grille de témoignages (exemple de 3 ou 4) -->
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Témoignage 1 -->
-        <div class="bg-gray-800 p-6 rounded">
-          <div class="flex items-center mb-4">
-            <img 
-              src="https://via.placeholder.com/80x80?text=Steven" 
-              alt="Steven portrait" 
-              class="w-12 h-12 rounded-full mr-3" />
-            <div>
-              <p class="font-semibold">Steven S</p>
-              <p class="text-sm text-gray-400">Journalist</p>
-            </div>
-          </div>
-          <p class="italic">
-            "Working with Eva Johnson has been a transformative experience. 
-            Her guidance and support have helped me unlock my full potential 
-            and achieve my goals with confidence."
-          </p>
-        </div>
-
-        <!-- Témoignage 2 -->
-        <div class="bg-gray-800 p-6 rounded">
-          <div class="flex items-center mb-4">
-            <img 
-              src="https://via.placeholder.com/80x80?text=Sarah" 
-              alt="Sarah portrait" 
-              class="w-12 h-12 rounded-full mr-3" />
-            <div>
-              <p class="font-semibold">Sarah J</p>
-              <p class="text-sm text-gray-400">Architect</p>
-            </div>
-          </div>
-          <p class="italic">
-            "Eva's coaching style is not only motivating but also deeply insightful. 
-            She has a unique ability to challenge me to grow while providing 
-            a safe space for self-discovery and reflection."
-          </p>
-        </div>
-
-        <!-- Témoignage 3 -->
-        <div class="bg-gray-800 p-6 rounded">
-          <div class="flex items-center mb-4">
-            <img 
-              src="https://via.placeholder.com/80x80?text=Davis" 
-              alt="Davis portrait" 
-              class="w-12 h-12 rounded-full mr-3" />
-            <div>
-              <p class="font-semibold">Davis M</p>
-              <p class="text-sm text-gray-400">Software Engineer</p>
-            </div>
-          </div>
-          <p class="italic">
-            "I can’t recommend Eva enough. Her expertise has been instrumental 
-            in helping me reorient and make meaningful progress 
-            both in my personal and professional life."
-          </p>
-        </div>
+        <br />
+        <br class="hidden lg:block" />
+        <p>
+          My work is informed by extensive knowledge of communication,
+          psychology and organization theories and research. I work
+          through an interdisciplinary lens.
+        </p>
+        <h2 class="text-2xl font-bold">A Personal Approach</h2>
+        <p>
+          In my coaching practice, I prioritize a personalized and
+          tailored approach to help you achieve your goals. By
+          understanding your unique strengths, challenges, and
+          aspirations, I work closely with you to develop a customized
+          plan that aligns with your individual needs.
+        </p>
+        <p>
+          Through one-on-one sessions, we will explore your potential,
+          address obstacles, and foster growth in a way that is
+          meaningful and impactful to you. Your journey towards personal
+          and professional development is important to me, and I am
+          committed to guiding and supporting you every step of the way.
+        </p>
       </div>
 
-      <!-- Indicateurs ou flèches pour slider (exemple simplifié) -->
-      <div class="flex items-center justify-center mt-8 space-x-2">
-        <!-- Cercles de pagination -->
-        <span class="w-3 h-3 bg-gray-500 rounded-full"></span>
-        <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-        <span class="w-3 h-3 bg-gray-500 rounded-full"></span>
+      <!-- Colonne de droite -->
+      <div class="flex flex-col gap-8">
+        <h2 class="text-2xl font-bold">Knowledge</h2>
+        <p>
+          As a professional coach, I firmly believe in the power of
+          knowledge as the cornerstone of personal and professional
+          growth.
+        </p>
+        <p>
+          Trained and certified with distinction in Coaching Individuals,
+          Teams, and Organizations. Through the use of innovative
+          methods I support learners to foster their creativity, and
+          develop their potential in public speaking, interpersonal
+          communication and team collaboration.
+        </p>
+        <h2 class="text-2xl font-bold">Personalization</h2>
+        <p>
+          Lived in 2 different continents, 3 different countries, 5
+          different cities, and many lives. If I were to draw my journey,
+          it would not look like a straight line. It would look like the
+          branches of a tree: the entrepreneur branch, the artist branch,
+          the writer, the yogi, the dancer. I bring to work my whole
+          self, the entire tree, with all the lessons learned.
+        </p>
       </div>
     </div>
-  </section>
 
-  <!-- Lien retour page principale -->
-  <section class="bg-gray-900 py-8 text-center">
-    <a href="index.html" class="text-gray-100 hover:text-red-400 font-semibold text-lg inline-flex items-center">
-      <span class="mr-2 text-2xl">&laquo;&laquo;</span>
-      Back to main page
+    <!-- Section Testimonials -->
+    <div class="flex flex-col gap-28 overflow-x-hidden py-10 lg:py-28">
+      <h1 class="ml-16 text-7xl font-extrabold text-secondary lg:text-9xl">
+        Testimonials
+      </h1>
+
+      <!-- Conteneur principal des slides (position relative pour le pseudo-élément "before") -->
+      <div
+        id="testimonial-container"
+        class="relative flex w-screen scale-100 flex-col gap-4 lg:scale-110 lg:flex-row
+               before:absolute before:inset-0 before:bg-gradient-to-r before:from-background before:via-transparent before:to-background"
+      >
+        <!-- Les slides et les boutons de navigation seront injectés via JS -->
+      </div>
+    </div>
+
+    <!-- Bouton "Back to main page" -->
+    <a
+      href="/"
+      class="my-16 ml-28 flex items-center gap-10"
+    >
+      <img
+        src="assets/icons/chevrons.svg"
+        alt="Back to main page"
+      />
+      <p class="text-4xl font-bold text-secondary">Back to main page</p>
     </a>
-  </section>
+  </main>
 
-  <!-- FOOTER avec barre rouge en bas -->
-  <footer class="bg-red-500 py-3 text-center">
-    <p class="text-white text-sm">eva-johnson.dev</p>
-  </footer>
+  <!-- Script JS pour les témoignages -->
+  <script>
+    // Tableau des témoignages
+    const testamonials = [
+      {
+        name: "Brian H",
+        job: "Artist",
+        text: "Eva Johnson is a true gem in the world of coaching. Her wisdom and encouragement have empowered me to overcome obstacles and step into my authentic self. I am grateful for the positive impact she has had on my journey.",
+        src: "assets/images/person_1.jpg"
+      },
+      {
+        name: "Steven S",
+        job: "Journalist",
+        text: "Working with Eva Johnson has been a transformative experience. Her guidance and support have helped me unlock my full potential and achieve my goals with confidence.",
+        src: "assets/images/person_2.png"
+      },
+      {
+        name: "Sarah J",
+        job: "Architect",
+        text: "Eva's coaching style is not only motivating but also deeply insightful. She has a unique ability to challenge me to grow while providing a safe space for self-discovery and reflection.",
+        src: "assets/images/person_3.png"
+      },
+      {
+        name: "Davis S",
+        job: "Software Engineer",
+        text: "I can't recommend Eva enough! Her expertise and empathy have been instrumental in helping me navigate challenges and make meaningful progress in both my personal and professional life.",
+        src: "assets/images/person_4.jpg"
+      }
+    ];
 
+    let currentIndex = 0;
+    const container = document.getElementById("testimonial-container");
+
+    // Fonction pour créer un slide
+    function createSlide(testimonial, isActive) {
+      // Conteneur principal
+      const slide = document.createElement("div");
+      slide.className = `mx-auto w-96 flex-col justify-between gap-2
+        rounded bg-new-gray px-10 py-8 lg:mx-auto
+        ${isActive ? "flex" : "hidden"}`;
+
+      // Citation
+      const quote = document.createElement("p");
+      quote.className = "px-4 text-center text-xs font-normal italic";
+      quote.textContent = `"${testimonial.text}"`;
+
+      // Bas du slide (nom, job, photo)
+      const bottom = document.createElement("div");
+      bottom.className = "flex items-center justify-between";
+
+      const leftPart = document.createElement("div");
+      leftPart.className = "flex flex-col gap-1";
+
+      const nameEl = document.createElement("p");
+      nameEl.className = "font-square-peg text-6xl";
+      nameEl.textContent = testimonial.name;
+
+      const jobEl = document.createElement("p");
+      jobEl.className = "text-sm";
+      jobEl.textContent = testimonial.job;
+
+      leftPart.appendChild(nameEl);
+      leftPart.appendChild(jobEl);
+
+      const imgEl = document.createElement("img");
+      imgEl.src = testimonial.src;
+      imgEl.alt = testimonial.name;
+      // Pour remplacer "size-16", on peut mettre w-16 h-16
+      imgEl.className = "w-16 h-16 rounded-full object-cover";
+
+      bottom.appendChild(leftPart);
+      bottom.appendChild(imgEl);
+
+      // Assembler
+      slide.appendChild(quote);
+      slide.appendChild(bottom);
+      return slide;
+    }
+
+    // Fonction pour créer les petits boutons (mobile only)
+    function createNavButtons() {
+      const btnContainer = document.createElement("div");
+      btnContainer.className = "mx-auto flex gap-2 lg:hidden";
+
+      testamonials.forEach((_, i) => {
+        const btn = document.createElement("button");
+        btn.ariaLabel = "Testimonial";
+        btn.className =
+          "w-4 h-4 rounded-full bg-primary transition-opacity hover:opacity-80";
+        btn.style.opacity = i === currentIndex ? "1" : "0.35";
+
+        btn.addEventListener("click", () => {
+          currentIndex = i;
+          renderSlides();
+        });
+        btnContainer.appendChild(btn);
+      });
+
+      return btnContainer;
+    }
+
+    // Fonction qui rend tous les slides
+    function renderSlides() {
+      // Vider le container
+      container.innerHTML = "";
+
+      // Créer chaque slide
+      testamonials.forEach((t, i) => {
+        const slide = createSlide(t, i === currentIndex);
+        container.appendChild(slide);
+      });
+
+      // Ajouter le conteneur de boutons de nav (mobile)
+      const btns = createNavButtons();
+      container.appendChild(btns);
+    }
+
+    // Changer de slide toutes les 5 secondes
+    setInterval(() => {
+      currentIndex = currentIndex === testamonials.length - 1 ? 0 : currentIndex + 1;
+      renderSlides();
+    }, 5000);
+
+    // Premier rendu
+    renderSlides();
+  </script>
 </body>
 </html>

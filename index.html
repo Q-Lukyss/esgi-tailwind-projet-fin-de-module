@@ -3,255 +3,404 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intégration Tailwind CSS</title>
-  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <title>Page d'accueil</title>
+
+  <!-- Import de la police Raleway (regular + italic) -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&display=swap"
+  />
+
+  <!-- Chargement de Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Votre fichier Tailwind compilé (contenant vos couleurs/paramètres personnalisés) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="flex min-h-screen flex-col bg-background font-raleway text-full-white">
 
-  <!-- HEADER / NAVBAR -->
-  <header class="bg-gray-800">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <!-- Logo + Nom (ou juste le nom de la coach) -->
-      <div class="text-2xl font-bold font-squarePig">
-        Eva Johnson
-        <span class="block text-sm font-normal">Coaching Consultant</span>
+  <!-- Navbar HTML -->
+  <nav class="flex flex-col px-8 py-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="font-square-peg text-7xl text-white">Eva Johnson</a>
+
+      <!-- Bouton hamburger (visible en mobile) -->
+      <img src="assets/icons/hamburger.svg" alt="Menu" class="lg:hidden">
+
+      <!-- Liens de navigation (affichés sur grand écran) -->
+      <div class="hidden lg:block">
+        <div class="flex gap-4" id="nav-links">
+          <!-- Les liens seront injectés via JavaScript -->
+        </div>
       </div>
 
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex space-x-6 items-center">
-        <a href="./index.html" class="text-red-400 font-semibold">Home</a>
-        <a href="./pages/about.html" class="hover:text-red-400">About Me</a>
-        <a href="./pages/working-together.html" class="hover:text-red-400">Working Together</a>
-        <a href="./pages/contact.html" class="hover:text-red-400">Contact</a>
-        <!-- Icônes ou liens vers réseaux sociaux -->
-        <a href="#" class="hover:text-red-400">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><!-- icon placeholder --></svg>
-        </a>
-      </nav>
-
-      <!-- Bouton hamburger pour mobile -->
-      <button 
-        class="md:hidden flex flex-col space-y-1 focus:outline-none"
-        onclick="document.getElementById('mobile-menu').classList.toggle('hidden');">
-        <span class="w-6 h-0.5 bg-gray-100"></span>
-        <span class="w-6 h-0.5 bg-gray-100"></span>
-        <span class="w-6 h-0.5 bg-gray-100"></span>
-      </button>
+      <!-- Icônes médias (affichées sur grand écran) -->
+      <div class="hidden lg:block">
+        <div class="flex gap-4" id="media-links">
+          <!-- Les liens médias seront injectés via JavaScript -->
+        </div>
+      </div>
     </div>
 
-    <!-- Menu Mobile (défaut: hidden) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-      <nav class="px-4 pb-4 flex flex-col space-y-2">
-        <a href="#" class="hover:text-red-400">Home</a>
-        <a href="#" class="hover:text-red-400">About Me</a>
-        <a href="#" class="hover:text-red-400">Services</a>
-        <a href="#" class="hover:text-red-400">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Ligne descriptive avec les Dot -->
+    <p class="flex items-center gap-1 text-xs font-semibold uppercase text-white">
+      Communication expert
+      <span class="inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">
+          <circle cx="5" cy="5" r="5"/>
+        </svg>
+      </span>
+      Coach
+      <span class="inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">
+          <circle cx="5" cy="5" r="5"/>
+        </svg>
+      </span>
+      Educator
+    </p>
+  </nav>
 
-  <!-- HERO SECTION -->
-  <section 
-    class="relative bg-center bg-cover bg-no-repeat flex items-center justify-center"
-    style="background-image: url('https://via.placeholder.com/1600x900?text=Hero+Background'); min-height: 60vh;">
+  <!-- Contenu principal -->
+  <main>
+    <!-- Section avec fond d'image de meeting + filtre -->
+    <section class="relative flex items-center justify-center gap-4 bg-bg-meeting bg-cover bg-center py-0">
+      <!-- Overlay coloré -->
+      <div class="absolute inset-0 bg-neutral-800 bg-opacity-60"></div>
     
-    <!-- Overlay sombre si besoin -->
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <!-- Contenu au premier plan -->
+      <div class="relative z-10 flex items-center justify-center gap-4">
+        <!-- Image d'Eva Johnson -->
+        <img
+          src="assets/images/eva_johnson_home.png"
+          class="max-w-md"
+          alt="Eva Johnson"
+        />
     
-    <div class="relative max-w-5xl mx-auto px-4 text-center">
-      <!-- Photo ou portrait -->
-      <div class="inline-block mb-4">
-        <img 
-          src="https://via.placeholder.com/250x350?text=Coach+Portrait" 
-          alt="Portrait de la coach"
-          class="w-48 h-auto mx-auto rounded shadow-lg" />
-      </div>
-      <!-- Texte principal -->
-      <h1 class="text-3xl md:text-5xl font-bold mb-4">
-        I coach diverse teams <br class="hidden md:block">to collaborate better
-      </h1>
-      <p class="mb-6 max-w-xl mx-auto">
-        Short tagline ou phrase d’accroche décrivant ce que vous faites ou proposez.
-      </p>
-
-      <!-- CTA principal -->
-      <a href="#" class="inline-block bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-full font-semibold">
-        Book your session now
-      </a>
-    </div>
-  </section>
-
-  <!-- SECTION ABOUT ME / ABOUT YOU -->
-  <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="flex flex-col md:flex-row gap-8">
-      <!-- About Me -->
-      <div class="flex-1">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">About me</h2>
-        <p class="mb-4">
-          Quelques lignes de présentation personnelle : expérience, expertise, 
-          ce qui vous passionne, et en quoi votre coaching est unique.
-        </p>
-        <p class="mb-4">
-          Par exemple : “J’aide les équipes à surmonter leurs blocages et à atteindre
-          leur plein potentiel.”
-        </p>
-        <a href="#" class="text-red-400 underline">More about me →</a>
-      </div>
-
-      <!-- About You -->
-      <div class="flex-1">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">About you</h2>
-        <p class="mb-4">
-          Texte décrivant le profil des clients : “Vous êtes manager en quête d’un
-          meilleur leadership ? Vous souhaitez améliorer la cohésion de vos équipes ?”
-        </p>
-        <p class="mb-4">
-          Expliquez comment votre coaching répond aux besoins spécifiques de vos clients.
-        </p>
-        <a href="#" class="text-red-400 underline">More about your needs →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION WORKING TOGETHER (avec la forme arrondie rouge) -->
-  <section class="relative overflow-hidden">
-    <!-- Pour simuler l’arche/arc rouge, on peut placer un bloc rond en position absolue -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120vw] h-[120vw] bg-red-600 rounded-full 
-                -z-10 opacity-20 md:opacity-100 md:top-[-50%]">
-    </div>
-
-    <div class="max-w-5xl mx-auto px-4 py-16 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Working Together</h2>
-      <p class="mb-10 max-w-2xl mx-auto">
-        Un petit paragraphe décrivant la philosophie de travail, la vision du coaching,
-        l’importance de la collaboration et les bénéfices.
-      </p>
-
-      <!-- Cards / étapes du coaching -->
-      <div class="grid md:grid-cols-2 gap-8 text-left">
-        <!-- Étape 1 -->
-        <div class="flex items-start space-x-4">
-          <div class="text-red-400">
-            <!-- Icon placeholder -->
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
+        <!-- Bloc de texte et bouton -->
+        <div class="hidden max-w-lg flex-col justify-center gap-8 lg:grid">
+          <p class="text-center text-4xl font-bold">
+            I coach diverse teams to collaborate better.
+          </p>
+          <div class="mx-auto">
+            <button
+              id="btnConcerned"
+              class="rounded-full bg-neutral-700 px-8 py-4 text-xl uppercase transition-colors hover:bg-vibrant-orange"
+            >
+              Are you concerned?
+            </button>
           </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Clarify your goals</h3>
-            <p>Définissez vos objectifs et priorités, et identifiez ce qui compte vraiment.</p>
-          </div>
-        </div>
-
-        <!-- Étape 2 -->
-        <div class="flex items-start space-x-4">
-          <div class="text-red-400">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Assess the reality of your situation</h3>
-            <p>Évaluez ce qui bloque actuellement, et comment vous pouvez avancer.</p>
-          </div>
-        </div>
-
-        <!-- Étape 3 -->
-        <div class="flex items-start space-x-4">
-          <div class="text-red-400">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Explore the possibilities</h3>
-            <p>Identifiez les différentes options, et ouvrez-vous de nouvelles perspectives.</p>
-          </div>
-        </div>
-
-        <!-- Étape 4 -->
-        <div class="flex items-start space-x-4">
-          <div class="text-red-400">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"></svg>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Decide on the best solution</h3>
-            <p>Choisissez la stratégie la plus adaptée et passez à l’action de manière concrète.</p>
-          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-48" viewBox="0 0 120 4">
+            <path
+              d="M 0 0 L 50 2 L 90 1 L 120 2"
+              class="fill-none stroke-primary"
+              stroke-width="3"
+            />
+          </svg>
         </div>
       </div>
+    </section>
+    
 
-      <!-- Boutons en bas de la section -->
-      <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a 
-          href="#" 
-          class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full">
-          More about my method
-        </a>
-        <a 
-          href="#" 
-          class="bg-transparent border border-red-500 hover:bg-red-500 text-red-500 hover:text-white font-semibold py-3 px-6 rounded-full">
-          Book your session now
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION KNOWLEDGE & PRACTICE -->
-  <section class="max-w-7xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Colonne gauche -->
-      <div>
-        <h2 class="text-3xl font-bold mb-4">Knowledge</h2>
-        <div class="mb-4">
-          <img 
-            src="https://via.placeholder.com/400x400?text=Knowledge+Picture" 
-            alt="Knowledge placeholder" 
-            class="w-full h-auto rounded shadow" />
+    <!-- Section About me & About you -->
+    <section class="flex flex-col justify-end text-xl text-full-white/90 lg:flex-row">
+      <!-- About me -->
+      <div class="relative flex flex-col justify-between gap-12 border-t-2 border-full-white px-28 py-16 leading-10">
+        <div class="absolute right-0 top-0 z-20 hidden -translate-y-1/2 translate-x-1/2 lg:block">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" aria-label="SVG Point" class="fill-primary">
+              <circle cx="35" cy="35" r="35" />
+            </svg>
+          </span>
         </div>
-        <p class="mb-4">
-          Un petit paragraphe expliquant les bases théoriques, les méthodes que vous utilisez,
-          références, formations suivies, etc.
-        </p>
-        <p>
-          Mettez en avant vos diplômes, certifications, recherches, etc.
-        </p>
-      </div>
-
-      <!-- Colonne droite -->
-      <div>
-        <h2 class="text-3xl font-bold mb-4">Practice</h2>
-        <p class="mb-4">
-          Expliquez comment vous mettez en œuvre ces connaissances à travers des exercices,
-          mises en situation, ateliers, etc.
-        </p>
-        <p class="mb-4">
-          Par exemple : “J’organise des workshops interactifs afin d’engager chaque membre
-          de l’équipe et favoriser la collaboration.”
-        </p>
-
-        <!-- Bloc "Life Experience" -->
-        <div class="mt-8 p-6 bg-gray-800 rounded shadow">
-          <h3 class="text-2xl font-semibold mb-2">Life Experience</h3>
+        <div class="flex flex-col gap-16">
+          <h2 class="text-7xl text-new-gray">About me</h2>
           <p>
-            Montrez que l’expérience personnelle peut être un atout : “J’ai moi-même 
-            traversé des périodes de doutes en tant que manager, ce qui me permet 
-            de comprendre plus facilement vos difficultés.”
+            My work is informed by extensive knowledge of communication, psychology and organization
+            theories and research. I work through an interdisciplinary lens.
+          </p>
+          <p class="text-right lg:text-left">
+            Certified with distinction in Coaching Individuals, Teams, and Organizations by a reputable business school.
+          </p>
+          <p>
+            Through the use of innovative methods I support professionals to foster their creativity,
+            and develop their potential in public speaking, interpersonal communication and team collaboration.
+          </p>
+        </div>
+        <a class="font-semibold uppercase" href="#">More about your needs +</a>
+      </div>
+
+      <!-- About you -->
+      <div class="z-10 flex flex-col justify-between gap-16 border-l-2 border-t-2 border-full-white bg-alternace-blue px-28 py-16 leading-10 lg:mt-[-5rem]">
+        <div class="flex flex-col gap-16">
+          <h2 class="text-7xl text-new-gray">About you</h2>
+          <p>
+            You are a busy professional who wants to share ideas more freely, communicate them with an
+            impact, feel seen, and be rewarded.
+          </p>
+          <p class="text-right lg:text-left">
+            You are an HR manager searching for personalized human development approaches that are
+            realistic, go beyond reified skills checkboxes, and produce sustainable results at the
+            individual, team, and organizational levels.
+          </p>
+          <p>
+            You are a forward looking organization that fosters diversity, nurtures collective
+            intelligence, and cares for its people.
+          </p>
+        </div>
+        <a class="font-semibold uppercase" href="#">More about your needs +</a>
+      </div>
+    </section>
+
+    <!-- Section SvgCurved -->
+    <section class="py-12">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400">
+        <path id="curvePath" d="M 0 400 L 0 100 Q 500 -100 1000 100 L 1000 350 L 1000 400 Q 900 100 500 90 Q 100 100 0 400 Z" class="fill-primary"/>
+        <clipPath id="curveClip">
+          <path d="M 0 400 L 0 100 Q 500 -100 1000 100 L 1000 350 L 1000 400 Q 900 100 500 90 Q 100 100 0 400 Z"/>
+        </clipPath>
+        <g font-family="Arial" font-size="75" text-anchor="middle">
+          <text x="280" y="150" class="fill-secondary stroke-secondary" stroke-width="1">Working</text>
+          <text x="280" y="150" class="fill-primary stroke-secondary" stroke-width="1" clip-path="url(#curveClip)">Working</text>
+          <text x="400" y="220" class="fill-secondary" stroke-width="1">Together</text>
+        </g>
+      </svg>
+    </section>
+
+    <!-- Citation / Quote -->
+    <section class="py-8">
+      <div class="mx-auto w-full max-w-xl border-l-4 border-secondary/80 px-6 py-1 text-xl italic text-secondary/80">
+        <p>
+          Although the coaching plan looks like a linear progression, in reality it is an iterative process that allows for ongoing evaluation and readjustment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section CheckView et chaîne de validations -->
+    <section id="check-chain-section" class="mx-auto my-12 flex flex-col gap-8 lg:mx-28">
+      <!-- La chaîne sera générée dynamiquement via JavaScript -->
+    </section>
+
+    <!-- Section DualButton -->
+    <section class="mx-auto flex flex-col-reverse gap-4 lg:flex-row py-8 justify-center">
+      <!-- Bouton de gauche -->
+      <button class="z-10 rounded-full bg-neutral-700 px-8 py-4 text-xl uppercase transition-colors hover:bg-neutral-600">
+        <div class="flex items-center gap-6">
+          <p>More about my method</p>
+          <img src="assets/icons/click.svg" alt="Click icon" class="hidden w-8 h-8 lg:block" />
+        </div>
+      </button>
+      <!-- Bouton de droite -->
+      <button class="rounded-full border-4 border-secondary bg-primary py-4 pl-8 pr-8 text-xl uppercase transition-colors hover:bg-primary/80 lg:ml-[-5rem] lg:pl-16">
+        <div class="flex items-center gap-6">
+          <p>Take appointment now</p>
+          <img src="assets/icons/meet.svg" alt="Click icon" class="hidden w-8 h-8 lg:block" />
+        </div>
+      </button>
+    </section>
+
+    <!-- Section ImageWithTextDecorations -->
+    <section class="grid gap-16 px-20 py-16">
+      <h2 class="text-7xl font-extrabold text-secondary">Knowledge</h2>
+      <div class="flex flex-col items-center justify-center lg:flex-row lg:items-end lg:justify-start">
+        <img src="assets/images/eva_johnson_outside.png" alt="Eva Johnson at her prime" class="max-w-80 rounded-bl-[10rem] rounded-tr-[10rem] object-cover" />
+        <div class="mb-8 mt-[-2rem] grid lg:ml-[-2rem] lg:mt-0 lg:gap-4">
+          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">PhD, Dreamland Institule of Business, ongoing</p>
+          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">M.A. Communication Theory, Uni. of Pacific West</p>
+          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">B.A. Philosophy, Psychology, Education, National of Aegean Islands</p>
+          <p class="border-b-4 border-full-white bg-primary px-8 py-2 text-xl">M.C.I.S. Media & Information Science, Hudson State University</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section DualText -->
+    <section class="grid gap-16 px-20 py-16">
+      <h2 class="text-center text-7xl font-extrabold text-secondary lg:text-left">Practice</h2>
+      <div class="grid justify-center gap-8 lg:justify-normal">
+        <p class="max-w-xl border-l-0 border-new-gray py-2 pl-12 lg:border-l-4">
+          with the use of innovative methods i support professionals to foster their creativity, and develop their potential in public speaking, interpersonal communication and team collaboration.
+        </p>
+        <div>
+          <p class="max-w-xl border-t-4 border-primary py-8 pl-12 lg:float-right lg:border-l-4 lg:border-t-0">
+            through the years i have trained hundreds of working students in improving their presentation skills, their eloquence and their interpersonal communication.. certified with distinction in coaching individuals, teams, and organizations by the dreamland institute of business.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA / BOUTON FINAL -->
-  <section class="py-8 bg-gray-800 text-center">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to dive in?</h2>
-    <p class="max-w-xl mx-auto mb-6">Petite phrase finale pour encourager à passer à l’action.</p>
-    <a 
-      href="#"
-      class="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-full">
-      Book a session
-    </a>
-  </section>
+    <!-- Section Life experience -->
+    <section class="mx-auto py-8">
+      <div class="mx-8 flex max-w-screen-lg flex-col-reverse gap-8 bg-neutral-700 p-12 shadow-2xl lg:flex-row">
+        <div class="flex flex-col justify-between gap-8 text-center text-sm lg:text-right">
+          <p class="max-w-lg leading-7">
+            Lived in 2 continents, 3 countries, 5 cities, and many lives. If I were to draw my journey,
+            it would look like the branches of a tree: the entrepreneur branch, the artist branch, the writer, the yogi, the dancer.
+            I bring to work my whole self, the entire tree, with all the lessons learned.
+          </p>
+          <p>Coaching in English, French, and Spanish</p>
+        </div>
+        <p class="border-secondary px-4 py-2 text-center text-5xl font-bold text-secondary lg:border-l-8 lg:text-left lg:text-7xl">
+          Life experience
+        </p>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 py-4 text-center text-sm">
-    <p class="opacity-70">&copy; 2023 Eva Johnson. All rights reserved.</p>
-  </footer>
+    <!-- Bouton Contact -->
+    <section class="mx-auto my-8 text-center">
+      <button class="flex gap-4 rounded-full border-4 border-secondary bg-primary px-8 py-2 text-xl hover:opacity-85 transition-opacity items-center justify-center mx-auto">
+        Contact now
+        <img src="assets/icons/meet.svg" alt="Meet icon" class="w-8 h-8" />
+      </button>
+    </section>
+  </main>
 
+  <!-- Footer -->
+  <div class="flex w-full items-center justify-center bg-primary py-2">
+    <a href="#" class="text-center text-lg text-white">eva-johnson.dev</a>
+  </div>
+
+  <!-- JavaScript pour interactions -->
+  <script>
+    // Interaction pour le bouton "Are you concerned?"
+    document.getElementById('btnConcerned').addEventListener('click', function() {
+      alert('Button clicked!');
+    });
+
+    // Tableau des liens de navigation
+    const links = [
+      { name: "Home", href: "/" },
+      { name: "About me", href: "/pages/about.html" },
+      { name: "Working together", href: "/pages/working-together.html" },
+      { name: "Contact", href: "/pages/contact.html" },
+    ];
+    const navLinksContainer = document.getElementById("nav-links");
+    const currentPath = window.location.pathname;
+    links.forEach(link => {
+      const a = document.createElement("a");
+      a.href = link.href;
+      a.textContent = link.name;
+      a.className = "px-3 py-2 transition-colors hover:bg-primary text-white";
+      if (currentPath === link.href) a.classList.add("bg-primary");
+      navLinksContainer.appendChild(a);
+    });
+
+    // Tableau des médias sociaux
+    const medias = [
+      { name: "Email", href: "mailto:eva.johnson@outlook.com", src: "assets/icons/mail.svg" },
+      { name: "LinkedIn", href: "https://www.linkedin.com/in/eva-johnson", src: "assets/icons/linkedin.svg" },
+      { name: "Phone", href: "tel:+1234567890", src: "assets/icons/phone.svg" },
+    ];
+    const mediaLinksContainer = document.getElementById("media-links");
+    medias.forEach(media => {
+      const a = document.createElement("a");
+      a.href = media.href;
+      a.className = "rounded-full bg-primary p-4 transition-colors hover:bg-primary/90";
+      const img = document.createElement("img");
+      img.className = "w-6 h-6";
+      img.src = media.src;
+      img.alt = media.name;
+      a.appendChild(img);
+      mediaLinksContainer.appendChild(a);
+    });
+
+    // --- Données et rendu de la chaîne de validations (CheckView) ---
+    const checks = [
+      {
+        name: 'Clarify your goals',
+        content: 'What do you want to achieve? Sometimes the goal is clear and loud. Sometimes it is dissimulated.',
+        src: 'assets/icons/target.svg'
+      },
+      {
+        name: 'Explore the possibilities',
+        content: 'What kind of possibilities are available to you? How can you reframe the problems to reveal new possibilities?',
+        src: 'assets/icons/world.svg'
+      },
+      {
+        name: 'Access the reality of your situation',
+        content: 'How far is your goal from where you are now? What obstacles stand in your way? What are your constraints and strengths?',
+        src: 'assets/icons/planet.svg'
+      },
+      {
+        name: 'Assess the possibilities and decide on the best solution for you',
+        content: 'What do you need to do to make it happen? How will you motivate yourself to stay on track?',
+        src: 'assets/icons/notes.svg'
+      }
+    ];
+
+    // Fonction de rendu d'un CheckView
+    function renderCheckView(check, compact = true) {
+      const container = document.createElement("div");
+      container.className = "flex flex-col gap-8" + (compact ? " max-w-lg" : "");
+
+      // En-tête : image et titre
+      const header = document.createElement("div");
+      header.className = "flex flex-col items-center gap-8 lg:flex-row";
+
+      const img = document.createElement("img");
+      img.src = check.src;
+      img.alt = check.name;
+      img.className = "w-12 h-12";
+      header.appendChild(img);
+
+      const title = document.createElement("p");
+      title.className = "text-center text-3xl font-semibold text-secondary lg:text-left";
+      title.textContent = check.name;
+      header.appendChild(title);
+
+      container.appendChild(header);
+
+      // Contenu textuel
+      const content = document.createElement("p");
+      content.className = "text-center text-new-gray lg:text-left";
+      content.textContent = check.content;
+      container.appendChild(content);
+
+      return container;
+    }
+
+    // Fonction pour créer une flèche
+    function renderArrow(src, alt, extraClasses = "") {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = alt;
+      img.className = extraClasses;
+      return img;
+    }
+
+    // Construction de la chaîne de validations
+    const chainContainer = document.getElementById("check-chain-section");
+
+    // Premier CheckView
+    chainContainer.appendChild(renderCheckView(checks[0], true));
+
+    // Premier niveau de regroupement
+    const level1 = document.createElement("div");
+    level1.className = "flex gap-16 lg:ml-16";
+    level1.appendChild(renderArrow("assets/icons/arrow2.svg", "Just a arrow", "absolute size-28 lg:relative"));
+
+    const level1Container = document.createElement("div");
+    level1Container.className = "mt-16 flex flex-col gap-8";
+    level1Container.appendChild(renderCheckView(checks[1], true));
+
+    // Niveau 2 de regroupement
+    const level2 = document.createElement("div");
+    level2.className = "flex gap-16 lg:ml-16";
+    level2.appendChild(renderArrow("assets/icons/arrow2.svg", "Multiples hands united", "absolute size-28 lg:relative"));
+
+    const level2Container = document.createElement("div");
+    level2Container.className = "mt-16 flex flex-col gap-16 lg:gap-8";
+    level2Container.appendChild(renderCheckView(checks[2], true));
+
+    // Niveau 3 de regroupement
+    const level3 = document.createElement("div");
+    level3.className = "lg:ml-28";
+    level3.appendChild(renderArrow("assets/icons/arrow3.svg", "Gymnasium meet", "relative ml-12 size-28 lg:ml-48"));
+    level3.appendChild(renderCheckView(checks[3], true));
+
+    level2Container.appendChild(level3);
+    level2.appendChild(level2Container);
+    level1Container.appendChild(level2);
+    level1.appendChild(level1Container);
+    chainContainer.appendChild(level1);
+  </script>
 </body>
 </html>

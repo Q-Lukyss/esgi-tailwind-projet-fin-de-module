@@ -1,0 +1,60 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+	import { page } from '$app/stores';
+	import { medias } from '$lib';
+	import Dot from './Dot.svelte';
+	import Media from './Media.svelte';
+
+	type Link = {
+		name: string;
+		href: string;
+	};
+
+	const links: Link[] = [
+		{
+			name: 'Home',
+			href: base + '/'
+		},
+		{
+			name: 'About me',
+			href: base + '/about'
+		},
+		{
+			name: 'Working together',
+			href: base + '/working'
+		},
+		{
+			name: 'Contact',
+			href: base + '/contact'
+		}
+	];
+</script>
+
+<nav class="flex flex-col px-8 py-4">
+	<div class="flex items-center justify-between">
+		<a href="/" class="font-square-peg text-7xl"> Eva Johnson </a>
+		<img src="/icons/hamburger.svg" alt="Menu" class="lg:hidden" />
+		<div class="hidden lg:block">
+			<div class="flex gap-4">
+				{#each links as { name, href }}
+					<a
+						{href}
+						class="px-3 py-2 transition-colors hover:bg-primary {$page.url.pathname === href
+							? 'bg-primary'
+							: ''} ">{name}</a
+					>
+				{/each}
+			</div>
+		</div>
+		<div class="hidden lg:block">
+			<div class="flex gap-4">
+				{#each medias as media (media.name)}
+					<Media {media} size="medium" />
+				{/each}
+			</div>
+		</div>
+	</div>
+	<p class="flex items-center gap-1 text-xs font-semibold uppercase">
+		Communication expert <Dot color="primary" /> Coach <Dot color="primary" /> Educator
+	</p>
+</nav>

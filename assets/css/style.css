@@ -1,0 +1,222 @@
+/* VARIABLES */
+@font-face {
+  font-family: "Square Pig";
+  src: url("../fonts/SquarePeg-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+:global(*) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.base {
+  background-color: #262733;
+  font-family: Raleway, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.fill-primary {
+  fill: #e64a3b;
+}
+
+.back {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  color: #eee2d4;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  flex: 1;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  #start-rect,
+  path,
+  #plus-medias {
+    display: none;
+  }
+}
+.page {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 1024px) {
+  .page {
+    flex-direction: row;
+  }
+}
+.page > div {
+  max-width: 450px;
+}
+.page .image {
+  position: relative;
+  margin-left: -30px;
+}
+.page .image div {
+  position: absolute;
+  transform: translateX(50%) translateY(-50%);
+  display: flex;
+  gap: 1.2rem;
+}
+.page .image div a {
+  display: inline-block;
+  background-color: #e64a3b;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+.page .image div a img {
+  width: 2rem;
+  height: 2rem;
+}
+.page textarea {
+  all: unset;
+  resize: none;
+  height: 5rem;
+}
+.page .title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #eee2d4;
+  margin-bottom: 4rem;
+}
+.page form {
+  display: grid;
+  gap: 2rem;
+}
+.page form input,
+.page form textarea {
+  padding: 0.4rem 1rem;
+  background-color: #3b3c47;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #eee2d4;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.page form input:focus,
+.page form textarea:focus {
+  outline: none;
+  border-color: #e64a3b;
+}
+.page form input::placeholder,
+.page form textarea::placeholder {
+  color: #ffffff;
+}
+.page form button {
+  padding: 0.7rem 3rem;
+  background-color: #e64a3b;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.page form button:hover {
+  background-color: #1a1a1a;
+}
+@media (max-width: 1024px) {
+  .page form button {
+    width: 100%;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 2rem;
+}
+nav .sub {
+  justify-items: center;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+nav div .links {
+  display: flex;
+  gap: 0.6rem;
+}
+nav div .links a {
+  transition: background-color 0.3s;
+  padding: 0.5rem 1rem;
+}
+nav div .links a.active {
+  background-color: #e64a3b;
+}
+nav div .medias {
+  display: flex;
+  gap: 1rem;
+}
+nav div .medias a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #e64a3b;
+  border-radius: 50%;
+}
+nav div .medias a img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .show-phone {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .hide-phone {
+    display: none;
+  }
+}
+footer {
+  background-color: #e64a3b;
+  padding: 10px 0;
+  text-align: center;
+}
+
+p,
+a {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.square-peg {
+  font-family: Square Peg, sans-serif;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

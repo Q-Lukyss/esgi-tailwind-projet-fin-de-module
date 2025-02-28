@@ -22,5 +22,5 @@ npx tailwindcss -i ./assets/css/input.css -o ./assets/css/tailwind.css --watch
 
 A la racine du projet 
 ```
-sass /assets/css.style.scss /assets/css/scss.css --watch
+sass assets/css/style.scss assets/css/scss.css --watch
 ```
