@@ -8,13 +8,16 @@
   <base href="/" /> 
   
   <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap" />
-
-  <!-- Tailwind CSS via CDN et votre fichier compilé -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&family=Square+Peg&display=swap"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/main.js" defer></script>
   <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 <body class="bg-background font-raleway text-full-black">
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
   <!-- Image de couverture -->
   <img src="assets/images/hands.png" alt="Multiples hands united" class="w-full object-cover" />
 
@@ -69,76 +72,79 @@
     <p class="text-4xl font-bold text-secondary">Back to main page</p>
   </a>
 
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
   <!-- Script JavaScript pour générer les CheckView -->
   <script>
-    // Définition des données "checks"
-    const checks = [
-      {
-        name: 'Clarify your goals',
-        content:
-          'What do you want to achieve? Sometimes the goal is clear and loud. Sometimes it is dissimulated.',
-        src: 'assets/icons/target.svg'
-      },
-      {
-        name: 'Explore the possibilities',
-        content:
-          'What kind of possibilities are available to you? How can you reframe the problems to reveal new possibilities?',
-        src: 'assets/icons/world.svg'
-      },
-      {
-        name: 'Access the reality of your situation',
-        content:
-          'How far is your goal from where you are now? What obstacles stand in your way? What are your constraints and strengths?',
-        src: 'assets/icons/planet.svg'
-      },
-      {
-        name: 'Assess the possibilities and decide on the best solution for you',
-        content:
-          'What do you need to do to make it happen? How will you motivate yourself to stay on track?',
-        src: 'assets/icons/notes.svg'
-      }
-    ];
+    // // Définition des données "checks"
+    // const checks = [
+    //   {
+    //     name: 'Clarify your goals',
+    //     content:
+    //       'What do you want to achieve? Sometimes the goal is clear and loud. Sometimes it is dissimulated.',
+    //     src: 'assets/icons/target.svg'
+    //   },
+    //   {
+    //     name: 'Explore the possibilities',
+    //     content:
+    //       'What kind of possibilities are available to you? How can you reframe the problems to reveal new possibilities?',
+    //     src: 'assets/icons/world.svg'
+    //   },
+    //   {
+    //     name: 'Access the reality of your situation',
+    //     content:
+    //       'How far is your goal from where you are now? What obstacles stand in your way? What are your constraints and strengths?',
+    //     src: 'assets/icons/planet.svg'
+    //   },
+    //   {
+    //     name: 'Assess the possibilities and decide on the best solution for you',
+    //     content:
+    //       'What do you need to do to make it happen? How will you motivate yourself to stay on track?',
+    //     src: 'assets/icons/notes.svg'
+    //   }
+    // ];
 
-    // Fonction de rendu d'un CheckView
-    function renderCheckView(check, compact = true) {
-      const container = document.createElement("div");
-      container.className = "flex flex-col gap-8" + (compact ? " max-w-lg" : "");
+    // // Fonction de rendu d'un CheckView
+    // function renderCheckView(check, compact = true) {
+    //   const container = document.createElement("div");
+    //   container.className = "flex flex-col gap-8" + (compact ? " max-w-lg" : "");
 
-      // En-tête : image et titre
-      const header = document.createElement("div");
-      header.className = "flex flex-col items-center gap-8 lg:flex-row";
+    //   // En-tête : image et titre
+    //   const header = document.createElement("div");
+    //   header.className = "flex flex-col items-center gap-8 lg:flex-row";
 
-      const img = document.createElement("img");
-      img.src = check.src;
-      img.alt = check.name;
-      // Taille équivalente à "size-12" en Tailwind : 3rem
-      img.className = "w-12 h-12";
-      header.appendChild(img);
+    //   const img = document.createElement("img");
+    //   img.src = check.src;
+    //   img.alt = check.name;
+    //   // Taille équivalente à "size-12" en Tailwind : 3rem
+    //   img.className = "w-12 h-12";
+    //   header.appendChild(img);
 
-      const title = document.createElement("p");
-      title.className = "text-center text-3xl font-semibold text-secondary lg:text-left";
-      title.textContent = check.name;
-      header.appendChild(title);
+    //   const title = document.createElement("p");
+    //   title.className = "text-center text-3xl font-semibold text-secondary lg:text-left";
+    //   title.textContent = check.name;
+    //   header.appendChild(title);
 
-      container.appendChild(header);
+    //   container.appendChild(header);
 
-      // Contenu textuel
-      const content = document.createElement("p");
-      content.className = "text-center text-new-gray lg:text-left";
-      content.textContent = check.content;
-      container.appendChild(content);
+    //   // Contenu textuel
+    //   const content = document.createElement("p");
+    //   content.className = "text-center text-new-gray lg:text-left";
+    //   content.textContent = check.content;
+    //   container.appendChild(content);
 
-      return container;
-    }
+    //   return container;
+    // }
 
-    // Récupérer le conteneur où insérer les CheckView
-    const checksContainer = document.getElementById("checks-container");
+    // // Récupérer le conteneur où insérer les CheckView
+    // const checksContainer = document.getElementById("checks-container");
 
-    // Pour chaque élément de checks, créer et ajouter son CheckView
-    checks.forEach(check => {
-      const checkView = renderCheckView(check, true);
-      checksContainer.appendChild(checkView);
-    });
+    // // Pour chaque élément de checks, créer et ajouter son CheckView
+    // checks.forEach(check => {
+    //   const checkView = renderCheckView(check, true);
+    //   checksContainer.appendChild(checkView);
+    // });
   </script>
 </body>
 </html>

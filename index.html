@@ -6,59 +6,16 @@
   <title>Page d'accueil</title>
 
   <!-- Import de la police Raleway (regular + italic) -->
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&display=swap"
-  />
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,400&display=swap" />
 
-  <!-- Chargement de Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Votre fichier Tailwind compilé (contenant vos couleurs/paramètres personnalisés) -->
+  <script src="/assets/js/main.js" defer></script>
   <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
 <body class="flex min-h-screen flex-col bg-background font-raleway text-full-white">
 
-  <!-- Navbar HTML -->
-  <nav class="flex flex-col px-8 py-4">
-    <div class="flex items-center justify-between">
-      <!-- Logo -->
-      <a href="/" class="font-square-peg text-7xl text-white">Eva Johnson</a>
-
-      <!-- Bouton hamburger (visible en mobile) -->
-      <img src="assets/icons/hamburger.svg" alt="Menu" class="lg:hidden">
-
-      <!-- Liens de navigation (affichés sur grand écran) -->
-      <div class="hidden lg:block">
-        <div class="flex gap-4" id="nav-links">
-          <!-- Les liens seront injectés via JavaScript -->
-        </div>
-      </div>
-
-      <!-- Icônes médias (affichées sur grand écran) -->
-      <div class="hidden lg:block">
-        <div class="flex gap-4" id="media-links">
-          <!-- Les liens médias seront injectés via JavaScript -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Ligne descriptive avec les Dot -->
-    <p class="flex items-center gap-1 text-xs font-semibold uppercase text-white">
-      Communication expert
-      <span class="inline-block">
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">
-          <circle cx="5" cy="5" r="5"/>
-        </svg>
-      </span>
-      Coach
-      <span class="inline-block">
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">
-          <circle cx="5" cy="5" r="5"/>
-        </svg>
-      </span>
-      Educator
-    </p>
-  </nav>
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
 
   <!-- Contenu principal -->
   <main>
@@ -254,153 +211,7 @@
   </main>
 
   <!-- Footer -->
-  <div class="flex w-full items-center justify-center bg-primary py-2">
-    <a href="#" class="text-center text-lg text-white">eva-johnson.dev</a>
-  </div>
+  <div id="footer-container"></div>
 
-  <!-- JavaScript pour interactions -->
-  <script>
-    // Interaction pour le bouton "Are you concerned?"
-    document.getElementById('btnConcerned').addEventListener('click', function() {
-      alert('Button clicked!');
-    });
-
-    // Tableau des liens de navigation
-    const links = [
-      { name: "Home", href: "/" },
-      { name: "About me", href: "/pages/about.html" },
-      { name: "Working together", href: "/pages/working-together.html" },
-      { name: "Contact", href: "/pages/contact.html" },
-    ];
-    const navLinksContainer = document.getElementById("nav-links");
-    const currentPath = window.location.pathname;
-    links.forEach(link => {
-      const a = document.createElement("a");
-      a.href = link.href;
-      a.textContent = link.name;
-      a.className = "px-3 py-2 transition-colors hover:bg-primary text-white";
-      if (currentPath === link.href) a.classList.add("bg-primary");
-      navLinksContainer.appendChild(a);
-    });
-
-    // Tableau des médias sociaux
-    const medias = [
-      { name: "Email", href: "mailto:eva.johnson@outlook.com", src: "assets/icons/mail.svg" },
-      { name: "LinkedIn", href: "https://www.linkedin.com/in/eva-johnson", src: "assets/icons/linkedin.svg" },
-      { name: "Phone", href: "tel:+1234567890", src: "assets/icons/phone.svg" },
-    ];
-    const mediaLinksContainer = document.getElementById("media-links");
-    medias.forEach(media => {
-      const a = document.createElement("a");
-      a.href = media.href;
-      a.className = "rounded-full bg-primary p-4 transition-colors hover:bg-primary/90";
-      const img = document.createElement("img");
-      img.className = "w-6 h-6";
-      img.src = media.src;
-      img.alt = media.name;
-      a.appendChild(img);
-      mediaLinksContainer.appendChild(a);
-    });
-
-    // --- Données et rendu de la chaîne de validations (CheckView) ---
-    const checks = [
-      {
-        name: 'Clarify your goals',
-        content: 'What do you want to achieve? Sometimes the goal is clear and loud. Sometimes it is dissimulated.',
-        src: 'assets/icons/target.svg'
-      },
-      {
-        name: 'Explore the possibilities',
-        content: 'What kind of possibilities are available to you? How can you reframe the problems to reveal new possibilities?',
-        src: 'assets/icons/world.svg'
-      },
-      {
-        name: 'Access the reality of your situation',
-        content: 'How far is your goal from where you are now? What obstacles stand in your way? What are your constraints and strengths?',
-        src: 'assets/icons/planet.svg'
-      },
-      {
-        name: 'Assess the possibilities and decide on the best solution for you',
-        content: 'What do you need to do to make it happen? How will you motivate yourself to stay on track?',
-        src: 'assets/icons/notes.svg'
-      }
-    ];
-
-    // Fonction de rendu d'un CheckView
-    function renderCheckView(check, compact = true) {
-      const container = document.createElement("div");
-      container.className = "flex flex-col gap-8" + (compact ? " max-w-lg" : "");
-
-      // En-tête : image et titre
-      const header = document.createElement("div");
-      header.className = "flex flex-col items-center gap-8 lg:flex-row";
-
-      const img = document.createElement("img");
-      img.src = check.src;
-      img.alt = check.name;
-      img.className = "w-12 h-12";
-      header.appendChild(img);
-
-      const title = document.createElement("p");
-      title.className = "text-center text-3xl font-semibold text-secondary lg:text-left";
-      title.textContent = check.name;
-      header.appendChild(title);
-
-      container.appendChild(header);
-
-      // Contenu textuel
-      const content = document.createElement("p");
-      content.className = "text-center text-new-gray lg:text-left";
-      content.textContent = check.content;
-      container.appendChild(content);
-
-      return container;
-    }
-
-    // Fonction pour créer une flèche
-    function renderArrow(src, alt, extraClasses = "") {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = alt;
-      img.className = extraClasses;
-      return img;
-    }
-
-    // Construction de la chaîne de validations
-    const chainContainer = document.getElementById("check-chain-section");
-
-    // Premier CheckView
-    chainContainer.appendChild(renderCheckView(checks[0], true));
-
-    // Premier niveau de regroupement
-    const level1 = document.createElement("div");
-    level1.className = "flex gap-16 lg:ml-16";
-    level1.appendChild(renderArrow("assets/icons/arrow2.svg", "Just a arrow", "absolute size-28 lg:relative"));
-
-    const level1Container = document.createElement("div");
-    level1Container.className = "mt-16 flex flex-col gap-8";
-    level1Container.appendChild(renderCheckView(checks[1], true));
-
-    // Niveau 2 de regroupement
-    const level2 = document.createElement("div");
-    level2.className = "flex gap-16 lg:ml-16";
-    level2.appendChild(renderArrow("assets/icons/arrow2.svg", "Multiples hands united", "absolute size-28 lg:relative"));
-
-    const level2Container = document.createElement("div");
-    level2Container.className = "mt-16 flex flex-col gap-16 lg:gap-8";
-    level2Container.appendChild(renderCheckView(checks[2], true));
-
-    // Niveau 3 de regroupement
-    const level3 = document.createElement("div");
-    level3.className = "lg:ml-28";
-    level3.appendChild(renderArrow("assets/icons/arrow3.svg", "Gymnasium meet", "relative ml-12 size-28 lg:ml-48"));
-    level3.appendChild(renderCheckView(checks[3], true));
-
-    level2Container.appendChild(level3);
-    level2.appendChild(level2Container);
-    level1Container.appendChild(level2);
-    level1.appendChild(level1Container);
-    chainContainer.appendChild(level1);
-  </script>
 </body>
 </html>

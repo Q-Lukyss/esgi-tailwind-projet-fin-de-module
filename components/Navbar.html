@@ -1,60 +1,40 @@
-<script lang="ts">
-	import { base } from '$app/paths';
-	import { page } from '$app/stores';
-	import { medias } from '$lib';
-	import Dot from './Dot.svelte';
-	import Media from './Media.svelte';
-
-	type Link = {
-		name: string;
-		href: string;
-	};
-
-	const links: Link[] = [
-		{
-			name: 'Home',
-			href: base + '/'
-		},
-		{
-			name: 'About me',
-			href: base + '/about'
-		},
-		{
-			name: 'Working together',
-			href: base + '/working'
-		},
-		{
-			name: 'Contact',
-			href: base + '/contact'
-		}
-	];
-</script>
-
 <nav class="flex flex-col px-8 py-4">
-	<div class="flex items-center justify-between">
-		<a href="/" class="font-square-peg text-7xl"> Eva Johnson </a>
-		<img src="/icons/hamburger.svg" alt="Menu" class="lg:hidden" />
-		<div class="hidden lg:block">
-			<div class="flex gap-4">
-				{#each links as { name, href }}
-					<a
-						{href}
-						class="px-3 py-2 transition-colors hover:bg-primary {$page.url.pathname === href
-							? 'bg-primary'
-							: ''} ">{name}</a
-					>
-				{/each}
-			</div>
-		</div>
-		<div class="hidden lg:block">
-			<div class="flex gap-4">
-				{#each medias as media (media.name)}
-					<Media {media} size="medium" />
-				{/each}
-			</div>
-		</div>
-	</div>
-	<p class="flex items-center gap-1 text-xs font-semibold uppercase">
-		Communication expert <Dot color="primary" /> Coach <Dot color="primary" /> Educator
-	</p>
-</nav>
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="font-square-peg text-7xl text-white">Eva Johnson</a>
+
+      <!-- Bouton hamburger (visible en mobile) -->
+      <img src="assets/icons/hamburger.svg" alt="Menu" class="lg:hidden">
+
+      <!-- Liens de navigation (affichés sur grand écran) -->
+      <div class="hidden lg:block">
+        <div class="flex gap-4" id="nav-links">
+          <!-- Les liens seront injectés via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Icônes médias (affichées sur grand écran) -->
+      <div class="hidden lg:block">
+        <div class="flex gap-4" id="media-links">
+          <!-- Les liens médias seront injectés via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Ligne descriptive avec les Dot -->
+    <p class="flex items-center gap-1 text-xs font-semibold uppercase text-white">
+      Communication expert
+      <span class="inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">
+          <circle cx="5" cy="5" r="5"/>
+        </svg>
+      </span>
+      Coach
+      <span class="inline-block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" aria-label="SVG Point" class="fill-primary">
+          <circle cx="5" cy="5" r="5"/>
+        </svg>
+      </span>
+      Educator
+    </p>
+  </nav>
