@@ -1,4 +1,4 @@
 <a href="/" class="mt-8 mb-16 mx-auto flex items-center gap-4 lg:mt-16 lg:ml-28">
   <img src="assets/icons/chevrons.svg" alt="Back to main page" />
-  <p class="text-2xl font-bold text-papyrus lg:text-4xl">Back to main page</p>
+  <p class="text-2xl font-bold text-papyrus hover:text-vibrant-orange lg:text-4xl">Back to main page</p>
 </a>
